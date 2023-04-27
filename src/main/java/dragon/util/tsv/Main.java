@@ -54,7 +54,7 @@ public class Main {
                 });
                 var outputPath = Paths.get("%s%s.json".formatted( "src/main/resources/json/", mainQuestData.getId()));
                 var writer = new FileWriter(outputPath.toFile());
-                gson.toJson(questDataFileList, writer);
+                gson.toJson(mainQuestData, writer);
                 writer.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
