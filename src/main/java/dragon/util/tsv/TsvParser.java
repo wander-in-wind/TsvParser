@@ -1,6 +1,7 @@
 package dragon.util.tsv;
 
 import cn.hutool.core.convert.Convert;
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import dragon.util.tsv.annotations.TsvColumnIndex;
 import dragon.util.tsv.annotations.TsvColumnName;
@@ -44,6 +45,7 @@ public class TsvParser {
     }
 
     private <T> T createObject(Class<T> tClass, String prefix) throws Exception {
+        if (ObjectUtil.isEmpty(tClass)) return null;
         var constructor = tClass.getDeclaredConstructor();
         constructor.setAccessible(true);
         T object = constructor.newInstance();
@@ -87,6 +89,7 @@ public class TsvParser {
     }
 
     private List<Object> createList(Class<?> tClass, String prefix, String fieldName) throws Exception {
+        if (ObjectUtil.isEmpty(tClass)) return null;
         //[Primitive Type, single] single column list, like `npcList`
         if ((sigSpecColumn != -1 || columnNameMap.containsKey(prefix + fieldName)) && isPrimitive(tClass)) {
             List<Object> list = new ArrayList();
