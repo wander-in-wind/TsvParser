@@ -1,0 +1,339 @@
+{
+  "id": 72229,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "WQ",
+  "bootMode": false,
+  "luaPath": "Actor/Quest/WQ72229",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 7222901,
+      "mainId": 72229,
+      "order": 5,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7222904,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_AND",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "72172_D3_QiMu_Die_A",
+          "count": 1
+        }
+      ],
+      "guide": {
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": true,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "133223367"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "133223368"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "133223369"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
+          "param": [
+            "3",
+            "133223502,1"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "3",
+            "133223122"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 7222902,
+      "mainId": 72229,
+      "order": 3,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7222903,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_AND",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            7222902
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": true,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "3",
+            "133223122"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 7222903,
+      "mainId": 72229,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7222905,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_AND",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "72172_D3_QiMu_A_Phase1",
+          "count": 1
+        }
+      ],
+      "showGuide": true,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 7222904,
+      "mainId": 72229,
+      "order": 4,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7222903,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_AND",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "72172_D3_QiMu_A_Phase2",
+          "count": 1
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "3",
+            "133223367"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "3",
+            "133223368"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "3",
+            "133223369"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "3",
+            "133223122"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
+          "param": [
+            "3",
+            "133223502,2"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 7222905,
+      "mainId": 72229,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7217217,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_AND",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_GAME_TIME_TICK",
+          "paramStr": "0,24",
+          "count": 0
+        }
+      ],
+      "showGuide": true,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
+          "param": [
+            "3",
+            "133223122,2"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "3",
+            "133223122"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 7222906,
+      "mainId": 72229,
+      "order": 6,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7222901,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_AND",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            7222906
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "3",
+            "133223122,133223506,133223431"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "3",
+            "133223122"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 0
+}

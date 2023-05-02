@@ -1,0 +1,121 @@
+{
+  "id": 25011,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "WQ",
+  "bootMode": true,
+  "recommendLevel": 0,
+  "repeatable": false,
+  "rewardIdList": [
+    125011
+  ],
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 2501101,
+      "mainId": 25011,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2501001,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_ENTER_ROOM",
+          "param": [
+            50
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            2016,
+            48
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q25009Target"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2501102,
+      "mainId": 25011,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2501101,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_ENTER_ROOM",
+          "param": [
+            50
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_DUNGEON",
+          "param": [
+            2016,
+            48
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_FAIL_DUNGEON",
+          "param": [
+            2016
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": false,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "2501101"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 0
+}

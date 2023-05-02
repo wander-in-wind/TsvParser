@@ -1,0 +1,305 @@
+{
+  "id": 23039,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "IQ",
+  "bootMode": false,
+  "luaPath": "Actor/Quest/IQ23039",
+  "recommendLevel": 0,
+  "repeatable": true,
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 2303901,
+      "mainId": 23039,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42330
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            2303901
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "param": [
+          "4422"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "exclusiveNpcList": [
+        4422,
+        4423
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2303902,
+      "mainId": 23039,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2303901,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42330
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_OR",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            2303903,
+            3
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            2303903,
+            4
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "param": [
+          "Q23039_RacingEnd"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "133308064",
+            "1"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "3",
+            "133308064"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        4422,
+        4423
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2303903,
+      "mainId": 23039,
+      "order": 3,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2303901,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42330
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            2303903
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_NOT_FINISH_PLOT",
+          "param": [
+            2303903
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2303904,
+      "mainId": 23039,
+      "order": 4,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2303903,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42330
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            2303904
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "4423"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_DAILY_TASK",
+          "param": [
+            "42330"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        4422,
+        4423
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2303905,
+      "mainId": 23039,
+      "order": 5,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2303903,
+            4
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42330
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            2303905
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "4423"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_DAILY_TASK",
+          "param": [
+            "42330"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        4422,
+        4423
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 42330,
+  "associateActivity": 0
+}

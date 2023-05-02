@@ -1,0 +1,372 @@
+{
+  "id": 70509,
+  "collectionId": 4009,
+  "series": 0,
+  "taskType": "WQ",
+  "bootMode": true,
+  "luaPath": "Actor/Quest/WQ70509",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "rewardIdList": [
+    170509
+  ],
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 7050901,
+      "mainId": 70509,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_UNKNOWN_30",
+          "param": [
+            5062005,
+            1
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            7050901
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "param": [
+          "30112"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_START",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
+          "param": [
+            "1068",
+            "201068003,1"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1045
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 7050902,
+      "mainId": 70509,
+      "order": 4,
+      "subIdSet": 0,
+      "isMpBlock": true,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7050904,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            7050902
+          ],
+          "count": 0
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_NOT_FINISH_PLOT",
+          "param": [
+            7050902
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            1068,
+            40
+          ],
+          "paramStr": "Q7050204_Play",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "param": [
+          "1045"
+        ],
+        "guideScene": 1068,
+        "guideStyle": "QUEST_GUIDE_STYLE_START",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "7050901"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1045
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 7050903,
+      "mainId": 70509,
+      "order": 5,
+      "subIdSet": 0,
+      "isMpBlock": true,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7050902,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            7050902
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            1068,
+            50
+          ],
+          "paramStr": "Q7050204_Play",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "param": [
+          "1045"
+        ],
+        "guideScene": 1068,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "1068",
+            "201068004"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "1068",
+            "201068005"
+          ]
+        }
+      ],
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "7050901"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1045
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 7050904,
+      "mainId": 70509,
+      "order": 3,
+      "subIdSet": 0,
+      "isMpBlock": true,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7050905,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            7050901
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            1068,
+            50
+          ],
+          "paramStr": "Q7050204_Play",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
+        "param": [
+          "1045"
+        ],
+        "guideScene": 1068,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "7050901"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1045
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 7050905,
+      "mainId": 70509,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": true,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7050901,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_OR",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "2010680031",
+          "count": 1
+        },
+        {
+          "type": "QUEST_CONTENT_QUEST_VAR_EQUAL",
+          "param": [
+            1
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            7050305,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            1068,
+            50
+          ],
+          "paramStr": "Q7050204_Play",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "OpenBartender_guide",
+          "0"
+        ],
+        "guideScene": 1068,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_SET_QUEST_VAR",
+          "param": [
+            "0",
+            "1",
+            "7050905"
+          ]
+        }
+      ],
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "7050901"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1045
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": true
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 5062,
+  "activityType": "NEW_ACTIVITY_BARTENDER"
+}

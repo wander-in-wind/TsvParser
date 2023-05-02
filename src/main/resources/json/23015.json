@@ -1,0 +1,186 @@
+{
+  "id": 23015,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "IQ",
+  "bootMode": false,
+  "luaPath": "Actor/Quest/IQ23015",
+  "recommendLevel": 0,
+  "repeatable": true,
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 2301501,
+      "mainId": 23015,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42022
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            2301501
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "4042"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "exclusiveNpcList": [
+        4042,
+        20657,
+        20658
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2301502,
+      "mainId": 23015,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42022
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2301501,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_ITEM_GIVING",
+          "param": [
+            2301502
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "20658"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_ACTIVE_ITEM_GIVING",
+          "param": [
+            "2301502"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        4042,
+        20657,
+        20658
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 2301503,
+      "mainId": 23015,
+      "order": 3,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            42022
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            2301502,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            2301503
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "4042"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_INC_DAILY_TASK_VAR",
+          "param": [
+            "42022",
+            "1"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_NOTIFY_DAILY_TASK",
+          "param": [
+            "42022"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        4042,
+        20657,
+        20658
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 42022,
+  "associateActivity": 0
+}

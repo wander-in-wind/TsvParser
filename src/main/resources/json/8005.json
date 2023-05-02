@@ -1,0 +1,1365 @@
+{
+  "id": 8005,
+  "collectionId": 1012,
+  "series": 1206,
+  "bootMode": true,
+  "luaPath": "Actor/Quest/AQ8005",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "rewardIdList": [
+    108005
+  ],
+  "chapterId": 1206,
+  "subQuests": [
+    {
+      "subId": 800501,
+      "mainId": 8005,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_OR",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800404,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800403,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800501
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800501_guide",
+          "20"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001123"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12427,
+        12429,
+        12452
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800502,
+      "mainId": 8005,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800501,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "166001123",
+          "count": 1
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_TEAM_DEAD",
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            6,
+            50
+          ],
+          "paramStr": "Q800501_T800501_N1022",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800501_T800501_N1022",
+          "20"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "800501"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+          "param": [
+            "166001123"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "6",
+            "166001123"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800503,
+      "mainId": 8005,
+      "order": 3,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800502,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800503
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1022"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+          "param": [
+            "166001123"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800504,
+      "mainId": 8005,
+      "order": 4,
+      "subIdSet": 0,
+      "isMpBlock": true,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800503,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800504
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800504_T800504_N1022"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+          "param": [
+            "166001123"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_DEL_SCENE_TAG",
+          "param": [
+            "6",
+            "1062"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_ADD_SCENE_TAG",
+          "param": [
+            "6",
+            "1061"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12427
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800505,
+      "mainId": 8005,
+      "order": 6,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800504,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800505
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800506_guide",
+          "20"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001123"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+          "param": [
+            "166001123"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001124"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12427,
+        12429,
+        12453
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800506,
+      "mainId": 8005,
+      "order": 7,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800505,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "166001124",
+          "count": 1
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_TEAM_DEAD",
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            6,
+            40
+          ],
+          "paramStr": "Q800506_guide",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800506_guide",
+          "20"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001124"
+          ]
+        }
+      ],
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "800505"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001124"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800508,
+      "mainId": 8005,
+      "order": 8,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800506,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800508
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800508_guide"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001125"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12427,
+        12429,
+        12452,
+        12453
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800509,
+      "mainId": 8005,
+      "order": 9,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800508,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "166001125",
+          "count": 1
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_TEAM_DEAD",
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_LEAVE_SCENE_RANGE",
+          "param": [
+            6,
+            40
+          ],
+          "paramStr": "Q800509_guide",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800509_guide",
+          "20"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001125"
+          ]
+        }
+      ],
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "800508"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001125"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800510,
+      "mainId": 8005,
+      "order": 10,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800509,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800510
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "T800520_N12454"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001674"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001674"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12427,
+        12429,
+        12452,
+        12453,
+        12514
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800511,
+      "mainId": 8005,
+      "order": 11,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800510,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800511
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            800516,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800511_guide"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12454,
+        12455,
+        12456,
+        12457
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800512,
+      "mainId": 8005,
+      "order": 12,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800511,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800512
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            800516,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800512_guide"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12454,
+        12455,
+        12456,
+        12457
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800513,
+      "mainId": 8005,
+      "order": 13,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800512,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800513
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            800516,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800513_guide"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12454,
+        12455,
+        12456,
+        12457
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800514,
+      "mainId": 8005,
+      "order": 14,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800513,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800514
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            800516,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800514_guide"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12427,
+        12454,
+        12455,
+        12456,
+        12457
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800515,
+      "mainId": 8005,
+      "order": 17,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800514,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800515
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q800515_guide"
+        ],
+        "guideScene": 6,
+        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001303"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001248"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12424,
+        12427,
+        12454,
+        12455,
+        12456,
+        12457
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800516,
+      "mainId": 8005,
+      "order": 15,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800510,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            800516
+          ],
+          "count": 0
+        }
+      ],
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            800514,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001303"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12424,
+        12458
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800517,
+      "mainId": 8005,
+      "order": 18,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800510,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800517
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800518,
+      "mainId": 8005,
+      "order": 16,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800516,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800518
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022,
+        12424
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800519,
+      "mainId": 8005,
+      "order": 19,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800510,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800519
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "6",
+            "166001303"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1022
+      ],
+      "exclusivePriority": 1000,
+      "isRefreshLimitedToSinglePlayer": true
+    },
+    {
+      "subId": 800520,
+      "mainId": 8005,
+      "order": 5,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            800503,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_OR",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            800520
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            800504,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_DEL_SCENE_TAG",
+          "param": [
+            "6",
+            "1061"
+          ]
+        },
+        {
+          "type": "QUEST_EXEC_ADD_SCENE_TAG",
+          "param": [
+            "6",
+            "1062"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": true
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 0
+}

@@ -1,0 +1,885 @@
+{
+  "id": 19044,
+  "collectionId": 3004,
+  "series": 103201,
+  "taskType": "LQ",
+  "bootMode": true,
+  "luaPath": "Actor/Quest/LQ19044",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "chapterId": 103201,
+  "subQuests": [
+    {
+      "subId": 1904401,
+      "mainId": 19044,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "param": [
+            103201,
+            10103
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_ITEM_GIVING",
+          "param": [
+            1904401
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_ACTIVE_ITEM_GIVING",
+          "param": [
+            "1904401"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320108
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904402,
+      "mainId": 19044,
+      "order": 3,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904401,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            40101
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320108
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904403,
+      "mainId": 19044,
+      "order": 4,
+      "subIdSet": 0,
+      "isMpBlock": true,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904402,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "param": [
+            1111,
+            1
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "KaeyaDungeon"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904404,
+      "mainId": 19044,
+      "order": 5,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904403,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            40301
+          ],
+          "count": 0
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_MY_WORLD",
+          "param": [
+            3
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_FAIL_DUNGEON",
+          "param": [
+            1111
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "1904403"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "20035",
+            "220035002"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904407,
+      "mainId": 19044,
+      "order": 10,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904404,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            1904405
+          ],
+          "count": 0
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_MY_WORLD",
+          "param": [
+            3
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_FAIL_DUNGEON",
+          "param": [
+            1111
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "1904403"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904409,
+      "mainId": 19044,
+      "order": 12,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904407,
+            3
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_OR",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            40401
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            301
+          ],
+          "count": 0
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_MY_WORLD",
+          "param": [
+            3
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_FAIL_DUNGEON",
+          "param": [
+            1111
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "1904403"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904410,
+      "mainId": 19044,
+      "order": 16,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904413,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "2200350031",
+          "count": 4
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_MY_WORLD",
+          "param": [
+            3
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_FAIL_DUNGEON",
+          "param": [
+            1111
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q19044Player3",
+          "40"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_ADD_QUEST_PROGRESS",
+          "param": [
+            "1904419",
+            "1"
+          ]
+        }
+      ],
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "1904403"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "20035",
+            "220035003"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904411,
+      "mainId": 19044,
+      "order": 19,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904410,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            302
+          ],
+          "count": 0
+        }
+      ],
+      "failCondComb": "LOGIC_OR",
+      "failCond": [
+        {
+          "type": "QUEST_CONTENT_ENTER_MY_WORLD",
+          "param": [
+            3
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_FAIL_DUNGEON",
+          "param": [
+            1111
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_TEAM_DEAD",
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "failExec": [
+        {
+          "type": "QUEST_EXEC_ROLLBACK_QUEST",
+          "param": [
+            "1904403"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904412,
+      "mainId": 19044,
+      "order": 13,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904407,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            301
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "20035",
+            "220035003"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904413,
+      "mainId": 19044,
+      "order": 15,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904407,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+          "param": [
+            103201,
+            40401
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1024"
+        ],
+        "guideScene": 20035,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "20035",
+            "220035003"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904415,
+      "mainId": 19044,
+      "order": 8,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904403,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            1904415
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "20035",
+            "220035002"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904416,
+      "mainId": 19044,
+      "order": 9,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904403,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            1904416
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
+          "param": [
+            "20035",
+            "220035002"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904417,
+      "mainId": 19044,
+      "order": 11,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904404,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "2200350011",
+          "count": 1
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "exclusiveNpcList": [
+        1024,
+        1028
+      ],
+      "exclusivePriority": 1100,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904419,
+      "mainId": 19044,
+      "order": 18,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            1904413,
+            3
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_ADD_QUEST_PROGRESS",
+          "param": [
+            1904419
+          ],
+          "count": 1
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": true,
+      "exclusivePriority": 0,
+      "coopPointIdList": [
+        10320109
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 1904420,
+      "mainId": 19044,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "param": [
+            103201,
+            10103
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_FINISH_PLOT",
+          "param": [
+            1904420
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "exclusivePriority": 0,
+      "coopPointIdList": [
+        10320108
+      ],
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 0
+}

@@ -1,0 +1,67 @@
+{
+  "id": 73664,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "WQ",
+  "bootMode": true,
+  "luaPath": "Actor/Quest/WQ73664",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 7366401,
+      "mainId": 73664,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_UNKNOWN_48"
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "paramStr": "133302213",
+          "count": 1
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_LOCATION",
+        "param": [
+          "Q7366401",
+          "30"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "133302213"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "3",
+            "133302213"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 0
+}

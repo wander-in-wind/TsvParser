@@ -1,6 +1,12 @@
 package dragon.game.data.enums;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum QuestCond {
+
     QUEST_COND_NONE(0),
     QUEST_COND_STATE_EQUAL(1),
     QUEST_COND_STATE_NOT_EQUAL(2),
@@ -82,13 +88,8 @@ public enum QuestCond {
     QUEST_COND_PLAYER_ENTER_REGION(78), // missing
     QUEST_COND_UNKNOWN(9999);
 
+    // todo: below this implementation is tentative and subject to change based on feedback and testing
+
+
     private final int value;
-
-    QuestCond(int id) {
-        this.value = id;
-    }
-
-    public int getValue() {
-        return value;
-    }
 }

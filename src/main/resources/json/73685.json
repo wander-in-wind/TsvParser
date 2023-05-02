@@ -1,0 +1,83 @@
+{
+  "id": 73685,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "WQ",
+  "bootMode": true,
+  "recommendLevel": 0,
+  "repeatable": false,
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 7368501,
+      "mainId": 73685,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7367501,
+            3
+          ]
+        },
+        {
+          "type": "QUEST_CONTENT_UNKNOWN_30",
+          "param": [
+            5096002,
+            1
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_OR",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            7367601,
+            2
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_QUEST_STATE_EQUAL",
+          "param": [
+            7367601,
+            3
+          ],
+          "count": 0
+        }
+      ],
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+          "param": [
+            "133303650",
+            "0"
+          ]
+        }
+      ],
+      "beginExec": [
+        {
+          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+          "param": [
+            "3",
+            "133303650"
+          ]
+        }
+      ],
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": true
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 5096,
+  "activityType": "NEW_ACTIVITY_UNKNOWN_3102"
+}

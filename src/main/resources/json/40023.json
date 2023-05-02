@@ -1,0 +1,99 @@
+{
+  "id": 40023,
+  "collectionId": 4006,
+  "series": 0,
+  "taskType": "EQ",
+  "bootMode": true,
+  "luaPath": "Actor/Quest/EQ40023",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "rewardIdList": [
+    140023
+  ],
+  "chapterId": 10041,
+  "subQuests": [
+    {
+      "subId": 4002301,
+      "mainId": 40023,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_UNKNOWN_30",
+          "param": [
+            2008004,
+            1
+          ]
+        }
+      ],
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            4002301
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "30067"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_SET_QUEST_GLOBAL_VAR",
+          "param": [
+            "40023",
+            "1"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        30067
+      ],
+      "exclusivePriority": 1050,
+      "isRefreshLimitedToSinglePlayer": false
+    },
+    {
+      "subId": 4002302,
+      "mainId": 40023,
+      "order": 2,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "showType": "QUEST_HIDDEN",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            99902,
+            3
+          ]
+        }
+      ],
+      "guide": {
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
+        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
+      },
+      "showGuide": true,
+      "finishParent": false,
+      "failParent": false,
+      "isRewind": false,
+      "exclusivePriority": 0,
+      "isRefreshLimitedToSinglePlayer": false
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 2008,
+  "activityType": "NEW_ACTIVITY_ROGUELIKE_DUNGEON"
+}

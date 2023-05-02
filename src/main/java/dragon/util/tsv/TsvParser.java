@@ -70,8 +70,9 @@ public class TsvParser {
                 else value = null;
             } else if (type == List.class) {
                 value = createList(type.getComponentType(), prefix, fieldName);
-//          } else if (type == Map.class) {
-//          //TODO: value = null;
+            } else if (type == Map.class) {
+                // todo: unImplementation
+                value = null;
             } else if (isPrimitive(type)) {
                 value = createPrimitive(type, prefix + fieldName);
             } else {

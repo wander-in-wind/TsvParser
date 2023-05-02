@@ -1,5 +1,10 @@
 package dragon.game.data.enums;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum QuestExec {
     QUEST_EXEC_NONE(0),
     QUEST_EXEC_DEL_PACK_ITEM(1),
@@ -71,16 +76,14 @@ public enum QuestExec {
     QUEST_EXEC_MODIFY_WEATHER_AREA(68), // missing
     QUEST_EXEC_MODIFY_ARANARA_COLLECTION_STATE(69), // missing
     QUEST_EXEC_GRANT_TRIAL_AVATAR_BATCH_AND_LOCK_TEAM(70), // missing
-    QUEST_EXEC_UNKNOWN(9999);
+    QUEST_EXEC_UNKNOWN(9999),
+
+    // todo: below this implementation is tentative and subject to change based on feedback and testing
+    QUEST_EXEC_UNKNOWN_71(71),
+    QUEST_EXEC_UNKNOWN_72(72),
+    QUEST_EXEC_UNKNOWN_73(73),
+    QUEST_EXEC_UNKNOWN_76(76);
 
     private final int value;
-
-    QuestExec(int id) {
-        this.value = id;
-    }
-
-    public int getValue() {
-        return value;
-    }
 
 }

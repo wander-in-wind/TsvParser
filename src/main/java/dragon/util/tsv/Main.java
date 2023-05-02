@@ -3,7 +3,7 @@ package dragon.util.tsv;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.resource.ResourceUtil;
 import cn.hutool.core.map.MapUtil;
-import com.google.gson.Gson;
+import cn.hutool.core.util.ObjectUtil;
 import com.google.gson.GsonBuilder;
 import dragon.game.data.MainQuestData;
 import dragon.game.data.QuestData;
@@ -11,9 +11,7 @@ import dragon.game.data.QuestData;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.charset.Charset;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
@@ -49,8 +47,8 @@ public class Main {
         mainValue.forEach(mainQuestData -> {
             try {
                 questDataFileList.forEach((questKey, questValue)-> {
-                    var subQuests = questValue.stream().filter(item -> mainQuestData.getId() == item.getMainId()).collect(Collectors.toList());
-                    mainQuestData.setSubQuests(subQuests);
+                    var subQuests = questValue.stream().filter(item -> ObjectUtil.equals(mainQuestData.getId(), item.getMainId())).collect(Collectors.toList());
+                    mainQuestData.getSubQuests().addAll(subQuests);
                 });
                 var outputPath = Paths.get("%s%s.json".formatted( "src/main/resources/json/", mainQuestData.getId()));
                 var writer = new FileWriter(outputPath.toFile());

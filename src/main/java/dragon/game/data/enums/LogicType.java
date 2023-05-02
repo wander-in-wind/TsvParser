@@ -1,6 +1,12 @@
 package dragon.game.data.enums;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum LogicType {
+
     LOGIC_NONE(0),
     LOGIC_AND(1),
     LOGIC_OR(2),
@@ -12,12 +18,4 @@ public enum LogicType {
     LOGIC_A_AND_B_OR_ETCAND(8);
 
     private final int value;
-
-    LogicType(int id) {
-        this.value = id;
-    }
-
-    public int getValue() {
-        return value;
-    }
 }

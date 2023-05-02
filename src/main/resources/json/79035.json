@@ -1,0 +1,86 @@
+{
+  "id": 79035,
+  "collectionId": 0,
+  "series": 0,
+  "taskType": "WQ",
+  "bootMode": false,
+  "luaPath": "Actor/Quest/WQ79035",
+  "recommendLevel": 0,
+  "repeatable": false,
+  "rewardIdList": [
+    179035
+  ],
+  "chapterId": 0,
+  "subQuests": [
+    {
+      "subId": 7903501,
+      "mainId": 79035,
+      "order": 1,
+      "subIdSet": 0,
+      "isMpBlock": false,
+      "acceptCondComb": "LOGIC_AND",
+      "acceptCond": [
+        {
+          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "param": [
+            7902538,
+            3
+          ]
+        },
+        {
+          "param": [
+            79025,
+            2,
+            1
+          ]
+        }
+      ],
+      "finishCondComb": "LOGIC_OR",
+      "finishCond": [
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            7903501
+          ],
+          "count": 0
+        },
+        {
+          "type": "QUEST_CONTENT_COMPLETE_TALK",
+          "param": [
+            7903502
+          ],
+          "count": 0
+        }
+      ],
+      "guide": {
+        "type": "QUEST_GUIDE_NPC",
+        "param": [
+          "1512"
+        ],
+        "guideScene": 3,
+        "guideStyle": "QUEST_GUIDE_STYLE_TARGET"
+      },
+      "showGuide": false,
+      "finishParent": true,
+      "failParent": false,
+      "isRewind": true,
+      "finishExec": [
+        {
+          "type": "QUEST_EXEC_CLEAR_TIME_VAR",
+          "param": [
+            "79025",
+            "2"
+          ]
+        }
+      ],
+      "exclusiveNpcList": [
+        1512
+      ],
+      "exclusivePriority": 1100,
+      "isRefreshLimitedToSinglePlayer": true
+    }
+  ],
+  "eventId": 0,
+  "associateActivity": 5084,
+  "activityType": "NEW_ACTIVITY_ECHO_SHELL"
+}
