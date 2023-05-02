@@ -44,6 +44,12 @@ public class TsvParser {
         return objects;
     }
 
+    private String getTsvFieldName(Field field) {
+        var definedColumName = field.getAnnotation(TsvColumnName.class);
+        if (definedColumName != null) return definedColumName.value();
+        else return field.getName();
+    }
+
     private <T> T createObject(Class<T> tClass, String prefix) throws Exception {
         if (ObjectUtil.isEmpty(tClass)) return null;
         var constructor = tClass.getDeclaredConstructor();
@@ -55,10 +61,7 @@ public class TsvParser {
             field.setAccessible(true);
             var type = field.getType();
 
-            String fieldName;
-            var definedColumName = field.getAnnotation(TsvColumnName.class);
-            if (definedColumName != null) fieldName = definedColumName.value();
-            else fieldName = field.getName();
+            String fieldName = getTsvFieldName(field);
 
             var definedColumIndex = field.getAnnotation(TsvColumnIndex.class);
             if (definedColumIndex != null) sigSpecColumn = definedColumIndex.value();
@@ -128,7 +131,7 @@ public class TsvParser {
         boolean success = false;
         int length = 0;
         for (var field : tClass.getDeclaredFields()) {
-            var columnName = "%s[%s]%s".formatted(prefix, fieldName, field.getName());
+            var columnName = "%s[%s]%s".formatted(prefix, fieldName, getTsvFieldName(field));
             if (columnNameMap.containsKey(columnName) && checkArrayLength(columnNameMap.get(columnName))) {
                 var content = columns[columnNameMap.get(columnName)];
                 success = true;
@@ -145,7 +148,7 @@ public class TsvParser {
             constructor.setAccessible(true);
             for (int i = 0; i < length; ++i) list.add(constructor.newInstance());
             for (var field : tClass.getDeclaredFields()) {
-                var columnName = "%s[%s]%s".formatted(prefix, fieldName, field.getName());
+                var columnName = "%s[%s]%s".formatted(prefix, fieldName, getTsvFieldName(field));
                 field.setAccessible(true);
                 if (columnNameMap.containsKey(columnName) && checkArrayLength(columnNameMap.get(columnName))) {
                     var content = columns[columnNameMap.get(columnName)];

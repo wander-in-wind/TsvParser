@@ -21,7 +21,7 @@ public class MainQuestData {
     @TsvColumnName("任务类型")
     QuestType taskType;
     @TsvColumnName("启用模式")
-    boolean bootMode;
+    boolean enabled;
     @TsvColumnName("Lua脚本路径")
     String luaPath;
     @TsvColumnName("推荐等级")

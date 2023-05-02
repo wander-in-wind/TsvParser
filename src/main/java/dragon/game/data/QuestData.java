@@ -18,7 +18,7 @@ public class QuestData {
     @TsvColumnName("序列")
     int order;
     @TsvColumnName("子任务组")
-    int subIdSet;
+    int subQuestGroup;
     @TsvColumnName("禁止进入联机")
     boolean isMpBlock;
     @TsvColumnName("显示状态")
@@ -70,9 +70,10 @@ public class QuestData {
     @TsvColumnName("CoopPointID")
     int[] coopPointIdList;
     @TsvColumnName("刷新是否限定单机")
-    boolean isRefreshLimitedToSinglePlayer;
+    boolean refreshNonCoopOnly;
     @TsvColumnName("关卡映射")
-    Map<Integer,Integer> levelMap;
+    String levelMap;
+    //Map<Integer,Integer> levelMap;
 
     public static class QuestItem{
         @TsvColumnName("ID")
@@ -92,9 +93,13 @@ public class QuestData {
 
     public static class QuestAcceptCondition {
         @TsvColumnName("类型")
-        private QuestContent type;
+        private QuestCond type;
         @TsvColumnName("参数")
         private int[] param;
+        @TsvColumnName("复杂参数")
+        private String paramStr;
+        @TsvColumnName("次数")
+        private int count;
     }
 
     public static class QuestContentCondition {
