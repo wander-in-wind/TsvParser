@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "WQ",
-  "bootMode": false,
+  "enabled": false,
   "luaPath": "Actor/Quest/WQ73175",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,23 +16,26 @@
       "subId": 7317501,
       "mainId": 73175,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
+          "type": "QUEST_COND_PLAYER_ENTER_REGION",
           "param": [
             133303203,
             203005
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7302515,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -47,22 +50,23 @@
       "failParent": false,
       "isRewind": false,
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 7317502,
       "mainId": 73175,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7317501,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -89,22 +93,23 @@
         20802
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 7317503,
       "mainId": 73175,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7317502,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -140,7 +145,7 @@
         20802
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     }
   ],
   "eventId": 0,

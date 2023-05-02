@@ -3,7 +3,7 @@
   "collectionId": 1002,
   "series": 1002,
   "taskType": "AQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/MQ372",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,15 +16,16 @@
       "subId": 37201,
       "mainId": 372,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             37113,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -53,21 +54,22 @@
         1001
       ],
       "exclusivePriority": 1000,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 37202,
       "mainId": 372,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             37201,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -96,21 +98,22 @@
         1001
       ],
       "exclusivePriority": 1000,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 37203,
       "mainId": 372,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             37202,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -135,6 +138,12 @@
       "finishParent": true,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 100164,
+          "count": 1
+        }
+      ],
       "finishExec": [
         {
           "type": "QUEST_EXEC_DEL_PACK_ITEM",
@@ -148,7 +157,7 @@
         1001
       ],
       "exclusivePriority": 1000,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

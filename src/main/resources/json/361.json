@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 1001,
   "taskType": "WQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/AQ361",
   "recommendLevel": 0,
   "repeatable": false,
@@ -13,16 +13,17 @@
       "subId": 36100,
       "mainId": 361,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             35311,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -48,22 +49,23 @@
         }
       ],
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 36101,
       "mainId": 361,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             36100,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -80,7 +82,7 @@
       "failParent": false,
       "isRewind": true,
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

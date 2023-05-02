@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "WQ",
-  "bootMode": false,
+  "enabled": false,
   "luaPath": "Actor/Quest/WQ70025",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,23 +16,25 @@
       "subId": 7002501,
       "mainId": 70025,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_UNKNOWN_44",
+          "type": "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
           "param": [
             7002404,
             1
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_UNKNOWN_30",
+          "type": "QUEST_COND_ACTIVITY_COND",
           "param": [
             5024002,
             1
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -63,21 +65,22 @@
         1512
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7002502,
       "mainId": 70025,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7002501,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -108,7 +111,7 @@
         1565
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

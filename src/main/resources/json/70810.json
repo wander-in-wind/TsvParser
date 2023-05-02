@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "WQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/WQ70810",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,37 +16,41 @@
       "subId": 7081001,
       "mainId": 70810,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_UNKNOWN_38",
+          "type": "QUEST_COND_COMPLETE_TALK",
           "param": [
             7081001,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_UNKNOWN_44",
+          "type": "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
           "param": [
             10003,
             1
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_UNKNOWN_33",
+          "type": "QUEST_COND_DAILY_TASK_VAR_EQ",
           "param": [
             23600,
             1,
             1
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_ENTER_ROOM",
+          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
           "param": [
             24
-          ]
+          ],
+          "count": 0
         }
       ],
       "guide": {
@@ -66,21 +70,22 @@
         1517
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081002,
       "mainId": 70810,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081001,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -110,21 +115,22 @@
         1419
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081003,
       "mainId": 70810,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081002,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_AND",
@@ -163,21 +169,22 @@
         1419
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081004,
       "mainId": 70810,
       "order": 4,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2060405,
             206040501
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -216,21 +223,22 @@
         1419
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081005,
       "mainId": 70810,
       "order": 5,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2060405,
             206040502
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -255,26 +263,33 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 100542,
+          "count": 1
+        }
+      ],
       "sharedNpcList": [
         1517,
         1419
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081006,
       "mainId": 70810,
       "order": 6,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2060405,
             206040503
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -299,34 +314,42 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 100542,
+          "count": 1
+        }
+      ],
       "sharedNpcList": [
         1517,
         1419
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081007,
       "mainId": 70810,
       "order": 7,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_OR",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081005,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081006,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -356,30 +379,32 @@
         1425
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081008,
       "mainId": 70810,
       "order": 8,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCondComb": "LOGIC_OR",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081005,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081006,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -409,31 +434,39 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": false,
+      "gainItems": [
+        {
+          "id": 100543,
+          "count": 1
+        }
+      ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081009,
       "mainId": 70810,
       "order": 9,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCondComb": "LOGIC_OR",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081005,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081006,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -464,21 +497,22 @@
       "failParent": false,
       "isRewind": false,
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081010,
       "mainId": 70810,
       "order": 10,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081009,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -517,21 +551,22 @@
         1425
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081011,
       "mainId": 70810,
       "order": 11,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081010,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -556,6 +591,12 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 100543,
+          "count": 1
+        }
+      ],
       "finishExec": [
         {
           "type": "QUEST_EXEC_DEL_PACK_ITEM_BATCH",
@@ -569,29 +610,31 @@
         1425
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081012,
       "mainId": 70810,
       "order": 12,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_OR",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081008,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081011,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -621,21 +664,22 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081013,
       "mainId": 70810,
       "order": 13,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081012,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -659,6 +703,12 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 100553,
+          "count": 1
+        }
+      ],
       "beginExec": [
         {
           "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
@@ -679,21 +729,22 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081014,
       "mainId": 70810,
       "order": 14,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081013,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -731,21 +782,22 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081015,
       "mainId": 70810,
       "order": 15,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081014,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -770,6 +822,12 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 100544,
+          "count": 1
+        }
+      ],
       "finishExec": [
         {
           "type": "QUEST_EXEC_DEL_ALL_SPECIFIC_PACK_ITEM",
@@ -783,21 +841,22 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081016,
       "mainId": 70810,
       "order": 16,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081015,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -827,22 +886,23 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081017,
       "mainId": 70810,
       "order": 17,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081015,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -877,22 +937,23 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081018,
       "mainId": 70810,
       "order": 18,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081015,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -927,22 +988,23 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081019,
       "mainId": 70810,
       "order": 19,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081015,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_OR",
@@ -985,22 +1047,23 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7081020,
       "mainId": 70810,
       "order": 20,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7081015,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_A_AND_B_AND_ETCOR",
@@ -1077,7 +1140,7 @@
         1465
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

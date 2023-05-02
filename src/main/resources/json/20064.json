@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "IQ",
-  "bootMode": false,
+  "enabled": false,
   "luaPath": "Actor/Quest/IQ20064",
   "recommendLevel": 0,
   "repeatable": true,
@@ -13,24 +13,26 @@
       "subId": 2006401,
       "mainId": 20064,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCondComb": "LOGIC_OR",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2006207,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2006204,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -45,22 +47,23 @@
       "failParent": false,
       "isRewind": true,
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2006402,
       "mainId": 20064,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2006401,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -77,7 +80,7 @@
       "failParent": false,
       "isRewind": true,
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 22400,

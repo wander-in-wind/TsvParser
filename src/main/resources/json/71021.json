@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "WQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/WQ71021",
   "recommendLevel": 60,
   "repeatable": false,
@@ -13,15 +13,16 @@
       "subId": 7102101,
       "mainId": 71021,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_ROOM",
+          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
           "param": [
             20
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -38,7 +39,7 @@
       "failParent": false,
       "isRewind": true,
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

@@ -3,7 +3,7 @@
   "collectionId": 8011,
   "series": 2033,
   "taskType": "LQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/LQ13017",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,16 +16,17 @@
       "subId": 1301701,
       "mainId": 13017,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1300604,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -40,7 +41,7 @@
       "failParent": false,
       "isRewind": true,
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     }
   ],
   "eventId": 0,

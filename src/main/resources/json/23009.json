@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "IQ",
-  "bootMode": false,
+  "enabled": false,
   "luaPath": "Actor/Quest/IQ23009",
   "recommendLevel": 0,
   "repeatable": true,
@@ -13,15 +13,16 @@
       "subId": 2300901,
       "mainId": 23009,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -49,35 +50,38 @@
         }
       ],
       "exclusivePriority": 0,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300902,
       "mainId": 23009,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300901,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_ADD_QUEST_PROGRESS",
+          "type": "QUEST_COND_QUEST_VAR_EQUAL",
           "param": [
             1,
             23009
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -108,28 +112,30 @@
         4103
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300903,
       "mainId": 23009,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300902,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -168,28 +174,30 @@
         4103
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300904,
       "mainId": 23009,
       "order": 5,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300917,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -228,35 +236,38 @@
         4103
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300908,
       "mainId": 23009,
       "order": 7,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300901,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_ADD_QUEST_PROGRESS",
+          "type": "QUEST_COND_QUEST_VAR_EQUAL",
           "param": [
             2,
             23009
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -286,28 +297,30 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300909,
       "mainId": 23009,
       "order": 8,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300908,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -332,6 +345,12 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 101913,
+          "count": 1
+        }
+      ],
       "finishExec": [
         {
           "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
@@ -361,28 +380,30 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300910,
       "mainId": 23009,
       "order": 9,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300909,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -420,35 +441,38 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300911,
       "mainId": 23009,
       "order": 11,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300901,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_ADD_QUEST_PROGRESS",
+          "type": "QUEST_COND_QUEST_VAR_EQUAL",
           "param": [
             3,
             23009
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -478,28 +502,30 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300912,
       "mainId": 23009,
       "order": 12,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300911,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -526,6 +552,12 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 101914,
+          "count": 1
+        }
+      ],
       "finishExec": [
         {
           "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
@@ -555,28 +587,30 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300913,
       "mainId": 23009,
       "order": 13,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300912,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -614,35 +648,38 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300914,
       "mainId": 23009,
       "order": 15,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300901,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_ADD_QUEST_PROGRESS",
+          "type": "QUEST_COND_QUEST_VAR_EQUAL",
           "param": [
             4,
             23009
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -672,28 +709,30 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300915,
       "mainId": 23009,
       "order": 16,
-      "subIdSet": 1,
+      "subQuestGroup": 1,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300914,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -755,28 +794,30 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300916,
       "mainId": 23009,
       "order": 17,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300915,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -814,34 +855,37 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300917,
       "mainId": 23009,
       "order": 4,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300903,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2300903
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -867,39 +911,48 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 101911,
+          "count": 1
+        }
+      ],
       "exclusiveNpcList": [
         4016,
         4103
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300918,
       "mainId": 23009,
       "order": 6,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300904,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2300904
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -944,34 +997,37 @@
         4103
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300919,
       "mainId": 23009,
       "order": 10,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300910,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2300910
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -1009,34 +1065,37 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300920,
       "mainId": 23009,
       "order": 14,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300913,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2300913
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -1074,34 +1133,37 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 2300921,
       "mainId": 23009,
       "order": 18,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
+          "type": "QUEST_COND_DAILY_TASK_START",
           "param": [
             42320
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             2300916,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
+          "type": "QUEST_COND_ITEM_GIVING_FINISHED",
           "param": [
             2300916
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -1139,7 +1201,7 @@
         4016
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 42320,

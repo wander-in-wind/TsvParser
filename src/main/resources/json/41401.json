@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "WQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/WQ41401",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,22 +16,24 @@
       "subId": 4140101,
       "mainId": 41401,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_UNKNOWN_30",
+          "type": "QUEST_COND_ACTIVITY_COND",
           "param": [
             50160103,
             1
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_ENTER_ROOM",
+          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
           "param": [
             20
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -60,7 +62,7 @@
         30044
       ],
       "exclusivePriority": 1050,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

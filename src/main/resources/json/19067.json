@@ -3,7 +3,7 @@
   "collectionId": 3002,
   "series": 103401,
   "taskType": "LQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/LQ19067",
   "recommendLevel": 0,
   "repeatable": false,
@@ -13,22 +13,25 @@
       "subId": 1906701,
       "mainId": 19067,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1906104,
             3
-          ]
+          ],
+          "count": 0
         },
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             103401,
             190610103
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -70,22 +73,23 @@
       "coopPointIdList": [
         10340108
       ],
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 1906702,
       "mainId": 19067,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1906701,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -127,7 +131,7 @@
       "coopPointIdList": [
         10340108
       ],
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

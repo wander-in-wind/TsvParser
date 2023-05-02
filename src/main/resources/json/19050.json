@@ -3,7 +3,7 @@
   "collectionId": 3007,
   "series": 102401,
   "taskType": "LQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/LQ19050",
   "recommendLevel": 0,
   "repeatable": false,
@@ -13,14 +13,15 @@
       "subId": 1905001,
       "mainId": 19050,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_UNKNOWN_49",
+          "type": "QUEST_COND_MAIN_COOP_START",
           "param": [
             102401
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -71,21 +72,22 @@
       "coopPointIdList": [
         10240101
       ],
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 1905002,
       "mainId": 19050,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1905001,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_OR",
@@ -148,28 +150,31 @@
       "coopPointIdList": [
         10240101
       ],
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 1905003,
       "mainId": 19050,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1905002,
             3
-          ]
+          ],
+          "count": 0
         },
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             102401,
             190500401
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_OR",
@@ -217,28 +222,31 @@
       "coopPointIdList": [
         10240102
       ],
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 1905004,
       "mainId": 19050,
       "order": 4,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1905002,
             3
-          ]
+          ],
+          "count": 0
         },
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             102401,
             190500402
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_OR",
@@ -285,7 +293,7 @@
       "coopPointIdList": [
         10240112
       ],
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

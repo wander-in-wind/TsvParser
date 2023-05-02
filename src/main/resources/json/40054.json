@@ -3,7 +3,7 @@
   "collectionId": 4011,
   "series": 10065,
   "taskType": "EQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/EQ40054",
   "recommendLevel": 0,
   "repeatable": false,
@@ -16,16 +16,17 @@
       "subId": 4005401,
       "mainId": 40054,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_AND",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_UNKNOWN_30",
+          "type": "QUEST_COND_ACTIVITY_COND",
           "param": [
             2012003,
             1
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -57,21 +58,22 @@
         3033
       ],
       "exclusivePriority": 1050,
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 4005402,
       "mainId": 40054,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             4005401,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -111,21 +113,22 @@
       "exclusivePlaceList": [
         4005402
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 4005403,
       "mainId": 40054,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             4005402,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -160,21 +163,22 @@
       "exclusivePlaceList": [
         320905
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 4005404,
       "mainId": 40054,
       "order": 4,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             4005403,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -200,6 +204,12 @@
       "finishParent": true,
       "failParent": false,
       "isRewind": false,
+      "gainItems": [
+        {
+          "id": 101725,
+          "count": 1
+        }
+      ],
       "exclusiveNpcList": [
         1034,
         1047,
@@ -211,7 +221,7 @@
       "exclusivePlaceList": [
         320905
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     }
   ],
   "eventId": 0,

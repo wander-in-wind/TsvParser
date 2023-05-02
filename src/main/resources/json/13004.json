@@ -3,7 +3,7 @@
   "collectionId": 2031,
   "series": 13000,
   "taskType": "LQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/LQ13004",
   "recommendLevel": 0,
   "repeatable": false,
@@ -13,16 +13,17 @@
       "subId": 1300401,
       "mainId": 13004,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1300303,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -58,7 +59,7 @@
         }
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,

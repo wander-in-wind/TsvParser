@@ -3,7 +3,7 @@
   "collectionId": 3011,
   "series": 106401,
   "taskType": "LQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/LQ19038",
   "recommendLevel": 0,
   "repeatable": false,
@@ -13,14 +13,16 @@
       "subId": 1903801,
       "mainId": 19038,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             106401,
             19037021
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -59,21 +61,22 @@
       "coopPointIdList": [
         10640105
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903802,
       "mainId": 19038,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903801,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -107,21 +110,22 @@
       "coopPointIdList": [
         10640105
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903803,
       "mainId": 19038,
       "order": 3,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": true,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903802,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -181,22 +185,23 @@
       "coopPointIdList": [
         10640105
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903804,
       "mainId": 19038,
       "order": 4,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903802,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -236,22 +241,23 @@
       "coopPointIdList": [
         10640105
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903805,
       "mainId": 19038,
       "order": 5,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903802,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -285,21 +291,22 @@
       "coopPointIdList": [
         10640105
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903806,
       "mainId": 19038,
       "order": 8,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903803,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCondComb": "LOGIC_OR",
@@ -342,29 +349,31 @@
       "coopPointIdList": [
         10640106
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903807,
       "mainId": 19038,
       "order": 7,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCondComb": "LOGIC_OR",
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903805,
             3
-          ]
+          ],
+          "count": 0
         },
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903804,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -398,20 +407,22 @@
       "coopPointIdList": [
         10640105
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903808,
       "mainId": 19038,
       "order": 12,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             106401,
             19038022
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -437,6 +448,12 @@
       "finishParent": false,
       "failParent": false,
       "isRewind": true,
+      "gainItems": [
+        {
+          "id": 101671,
+          "count": 1
+        }
+      ],
       "exclusiveNpcList": [
         12319,
         12320,
@@ -446,21 +463,22 @@
       "coopPointIdList": [
         10640108
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903809,
       "mainId": 19038,
       "order": 13,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903808,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -503,21 +521,22 @@
       "coopPointIdList": [
         10640108
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903810,
       "mainId": 19038,
       "order": 16,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             99902,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -549,21 +568,22 @@
       "coopPointIdList": [
         10640108
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903811,
       "mainId": 19038,
       "order": 15,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             1903809,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -599,20 +619,22 @@
       "coopPointIdList": [
         10640108
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903812,
       "mainId": 19038,
       "order": 10,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             106401,
             19038021
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -646,21 +668,23 @@
       "coopPointIdList": [
         10640107
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     },
     {
       "subId": 1903813,
       "mainId": 19038,
       "order": 11,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "showType": "QUEST_HIDDEN",
       "acceptCond": [
         {
+          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
           "param": [
             106401,
             19038021
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -678,7 +702,7 @@
       "coopPointIdList": [
         10640107
       ],
-      "isRefreshLimitedToSinglePlayer": true
+      "refreshNonCoopOnly": true
     }
   ],
   "eventId": 0,

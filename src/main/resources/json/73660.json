@@ -3,7 +3,7 @@
   "collectionId": 0,
   "series": 0,
   "taskType": "WQ",
-  "bootMode": true,
+  "enabled": true,
   "luaPath": "Actor/Quest/WQ73660",
   "recommendLevel": 0,
   "repeatable": false,
@@ -13,11 +13,12 @@
       "subId": 7366001,
       "mainId": 73660,
       "order": 1,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_UNKNOWN_48"
+          "type": "QUEST_COND_CITY_REPUTATION_REQUEST",
+          "count": 0
         }
       ],
       "finishCond": [
@@ -54,21 +55,22 @@
         4094
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     },
     {
       "subId": 7366002,
       "mainId": 73660,
       "order": 2,
-      "subIdSet": 0,
+      "subQuestGroup": 0,
       "isMpBlock": false,
       "acceptCond": [
         {
-          "type": "QUEST_CONTENT_KILL_MONSTER",
+          "type": "QUEST_COND_STATE_EQUAL",
           "param": [
             7366001,
             3
-          ]
+          ],
+          "count": 0
         }
       ],
       "finishCond": [
@@ -97,7 +99,7 @@
         4094
       ],
       "exclusivePriority": 1100,
-      "isRefreshLimitedToSinglePlayer": false
+      "refreshNonCoopOnly": false
     }
   ],
   "eventId": 0,
