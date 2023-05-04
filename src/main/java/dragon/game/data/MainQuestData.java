@@ -10,8 +10,6 @@ import java.util.List;
 
 @Data
 public class MainQuestData {
-
-
     @TsvColumnName("父任务ID")
     int id;
     @TsvColumnName("合集ID")
@@ -19,7 +17,7 @@ public class MainQuestData {
     @TsvColumnName("父任务组")
     int series;
     @TsvColumnName("任务类型")
-    QuestType taskType;
+    QuestType type;
     @TsvColumnName("启用模式")
     boolean enabled;
     @TsvColumnName("Lua脚本路径")
@@ -41,6 +39,5 @@ public class MainQuestData {
     @TsvColumnName("活动类型")
     ActivityType activityType;
     @TsvColumnName("VideoKey")
-    String videoKey;
-
+    long videoKey;
 }
