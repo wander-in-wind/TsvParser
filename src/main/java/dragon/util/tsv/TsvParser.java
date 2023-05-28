@@ -17,7 +17,7 @@ public class TsvParser {
 
     private final Map<String, Integer> columnNameMap;
     private final BufferedReader reader;
-    private final Map<Class<?>, Map<Integer, Enum<?>>> enumCache = new HashMap();
+    private final Map<Class<?>, Map<Integer, Enum<?>>> enumCache = new HashMap<>();
     private String[] columns;
     //if it is not -1, parser must use the column to parse and prevent recursion.
     private int sigSpecColumn = -1;
@@ -27,14 +27,14 @@ public class TsvParser {
         var tableHead = tsvReader.readLine();
         String[] columnNames = tableHead.split("\t");
         int columnCount = columnNames.length;
-        columnNameMap = new HashMap();
+        columnNameMap = new HashMap<>();
         for (int i = 0; i < columnCount; ++i)
             columnNameMap.put(columnNames[i], i);
     }
 
     public <T> List<T> parse(Class<T> tClass) throws Exception {
         if (tClass.isArray() || isPrimitive(tClass)) return null;
-        List<T> objects = new ArrayList();
+        List<T> objects = new ArrayList<>();
         String line;
         while ((line = reader.readLine()) != null) {
             //beware of multiple tabs symbol,java compiler will be treated one
@@ -96,7 +96,7 @@ public class TsvParser {
         if (ObjectUtil.isEmpty(tClass)) return null;
         //[Primitive Type, single] single column list, like `npcList`
         if ((sigSpecColumn != -1 || columnNameMap.containsKey(prefix + fieldName)) && isPrimitive(tClass)) {
-            List<Object> list = new ArrayList();
+            List<Object> list = new ArrayList<>();
             int index = sigSpecColumn == -1 ? columnNameMap.get(prefix + fieldName) : sigSpecColumn;
             if (!checkArrayLength(index)) return null;
             var content = columns[index].split(",");
@@ -110,7 +110,7 @@ public class TsvParser {
 
         //[Primitive Type, multiple] like `param1`, `param2`
         if (isPrimitive(tClass)) {
-            List<Object> list = new ArrayList();
+            List<Object> list = new ArrayList<>();
             var baseName = prefix + fieldName;
             boolean success = false;
             for (int i = 1;; ++i) {
@@ -143,7 +143,7 @@ public class TsvParser {
         }
         if (success) {
             if (length == 0) return null;
-            List<Object> list = new ArrayList(length);
+            List<Object> list = new ArrayList<>(length);
             var constructor = tClass.getDeclaredConstructor();
             constructor.setAccessible(true);
             for (int i = 0; i < length; ++i) list.add(constructor.newInstance());
@@ -164,7 +164,7 @@ public class TsvParser {
 
         //[Non-Primitive Type, multiple] number related list, like `[finishExec]1param1`
         if (!isPrimitive(tClass)) {
-            List<Object> list = new ArrayList();
+            List<Object> list = new ArrayList<>();
             for (int i = 1; ; ++i) {
                 var base = "%s[%s]%d".formatted(prefix, fieldName, i);
                 var object = createObject(tClass, base);
@@ -196,8 +196,7 @@ public class TsvParser {
             Map<Integer, Enum<?>> enumMap;
             //try with string name
             try {
-                var value = Enum.valueOf((Class<? extends Enum>) type, v);
-                return value;
+                return Enum.valueOf((Class<? extends Enum>) type, v);
             } catch (Exception ignored) {}
 
             //try with int value
@@ -212,10 +211,12 @@ public class TsvParser {
                 }
                 enumCache.put(type, enumMap);
             }
+            var e = enumMap.get(Integer.parseInt(v));
             //if the value is empty, the first one in the enumeration is taken
-            if (v.isEmpty()) return enumMap.get(0);
-            int num = Integer.parseInt(v);
-            return enumMap.get(num);
+            if (e == null) {
+                System.out.println("[WARNING]:Enum not found for Class: " + type.getName() + " value: " + v);
+                return null;
+            } else return e;
         } else if (type == int.class) {
             return Integer.parseInt(v);
         } else if (type == double.class) {
@@ -246,7 +247,7 @@ public class TsvParser {
      * @return the @{code columns} the is within Range
      */
     private Boolean checkArrayLength(Integer index){
-        return (index >= 0 && index < columns.length) ? true : false;
+        return index >= 0 && index < columns.length;
     }
 
     /**

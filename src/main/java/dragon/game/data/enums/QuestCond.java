@@ -86,10 +86,12 @@ public enum QuestCond {
     QUEST_COND_SCENE_POINT_UNLOCK(76), // missing, only NPC groups
     QUEST_COND_SCENE_LEVEL_TAG_EQ(77), // missing
     QUEST_COND_PLAYER_ENTER_REGION(78), // missing
-    QUEST_COND_UNKNOWN(9999);
+    QUEST_COND_ACTIVITY_SCHEDULE_OPEN_AND_COND(79),
+    QUEST_COND_UNKNOWN(9999),
 
     // todo: below this implementation is tentative and subject to change based on feedback and testing
-
+    QUEST_COND_UNKNOWN_80(80),
+    QUEST_COND_UNKNOWN_86(86);
 
     private final int value;
 }

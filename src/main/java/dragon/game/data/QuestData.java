@@ -38,7 +38,7 @@ public class QuestData {
     @TsvColumnName("任务指引")
     Guide guide;
     @TsvColumnName("场景内指引")
-    boolean showGuide;
+    ShowQuestGuideType showGuide;
     @TsvColumnName("完成父任务")
     boolean finishParent;
     @TsvColumnName("失败父任务")
@@ -66,7 +66,7 @@ public class QuestData {
     @TsvColumnName("加载队伍技能组")
     String loadTeamAbilityGroup;
     @TsvColumnName("独占情境ID")
-    int[]exclusivePlaceList;
+    int[] exclusivePlaceList;
     @TsvColumnName("CoopPointID")
     int[] coopPointIdList;
     @TsvColumnName("刷新是否限定单机")

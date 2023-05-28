@@ -82,6 +82,7 @@ public enum QuestExec {
     QUEST_EXEC_UNKNOWN_71(71),
     QUEST_EXEC_UNKNOWN_72(72),
     QUEST_EXEC_UNKNOWN_73(73),
+    QUEST_EXEC_UNKNOWN_75(75),
     QUEST_EXEC_UNKNOWN_76(76);
 
     private final int value;
