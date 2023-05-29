@@ -2,7 +2,9 @@ package dragon.game.data;
 
 
 import cn.hutool.core.collection.CollectionUtil;
-import dragon.game.data.enums.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import dragon.game.data.enums.ActivityType;
+import dragon.game.data.enums.QuestType;
 import dragon.util.tsv.annotations.TsvColumnName;
 import lombok.Data;
 
@@ -13,6 +15,7 @@ public class MainQuestData {
     @TsvColumnName("父任务ID")
     int id;
     @TsvColumnName("合集ID")
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     int collectionId;
     @TsvColumnName("父任务组")
     int series;

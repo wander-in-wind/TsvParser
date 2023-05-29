@@ -1,11 +1,9 @@
 package dragon.game.data;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import dragon.game.data.enums.*;
 import dragon.util.tsv.annotations.TsvColumnName;
 import lombok.Data;
-
-import java.util.Map;
 
 @Data
 public class QuestData {
@@ -20,6 +18,7 @@ public class QuestData {
     @TsvColumnName("子任务组")
     int subQuestGroup;
     @TsvColumnName("禁止进入联机")
+    @JsonProperty("isMpBlock")
     boolean isMpBlock;
     @TsvColumnName("显示状态")
     QuestShowType showType;
@@ -44,6 +43,7 @@ public class QuestData {
     @TsvColumnName("失败父任务")
     boolean failParent;
     @TsvColumnName("是存档点")
+    @JsonProperty("isRewind")
     boolean isRewind;
     @TsvColumnName("任务道具")
     QuestItem[] gainItems;
@@ -75,6 +75,7 @@ public class QuestData {
     String levelMap;
     //Map<Integer,Integer> levelMap;
 
+    @Data
     public static class QuestItem{
         @TsvColumnName("ID")
         int id;
@@ -82,6 +83,7 @@ public class QuestData {
         int count;
     }
 
+    @Data
     public static class QuestExecParam {
         @TsvColumnName("类型")
         QuestExec type;
@@ -91,6 +93,7 @@ public class QuestData {
         String count;
     }
 
+    @Data
     public static class QuestAcceptCondition {
         @TsvColumnName("类型")
         private QuestCond type;
@@ -102,6 +105,7 @@ public class QuestData {
         private int count;
     }
 
+    @Data
     public static class QuestContentCondition {
         @TsvColumnName("类型")
         private QuestContent type;
@@ -113,6 +117,7 @@ public class QuestData {
         private int count;
     }
 
+    @Data
     public static class Guide {
         @TsvColumnName("类型")
         private QuestGuideType type;

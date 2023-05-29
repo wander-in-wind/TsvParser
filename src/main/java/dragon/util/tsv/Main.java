@@ -4,13 +4,13 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.resource.ResourceUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.ObjectUtil;
-import com.google.gson.GsonBuilder;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dragon.game.data.MainQuestData;
 import dragon.game.data.QuestData;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.util.List;
@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        var gson = new GsonBuilder().setPrettyPrinting().create();
         Map<String, List<MainQuestData>> mainQuestDataFileList = MapUtil.newConcurrentHashMap();
         Map<String, List<QuestData>> questDataFileList = MapUtil.newConcurrentHashMap();
         var url = ResourceUtil.getResources("").get(1);
@@ -50,11 +49,11 @@ public class Main {
                     var subQuests = questValue.stream().filter(item -> ObjectUtil.equals(mainQuestData.getId(), item.getMainId())).collect(Collectors.toList());
                     mainQuestData.getSubQuests().addAll(subQuests);
                 });
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
                 var outputPath = Paths.get("%s%s.json".formatted( "src/main/resources/json/", mainQuestData.getId()));
-                var writer = new FileWriter(outputPath.toFile());
-                gson.toJson(mainQuestData, writer);
-                writer.close();
-            } catch (IOException e) {
+                FileUtil.writeUtf8String(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(mainQuestData), outputPath.toFile());
+            } catch (JsonProcessingException e) {
                 throw new RuntimeException(e);
             }
         }));
