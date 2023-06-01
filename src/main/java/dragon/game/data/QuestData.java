@@ -21,6 +21,9 @@ public class QuestData {
     int subQuestGroup;
     @TsvColumnName("禁止进入联机")
     boolean isMpBlock;
+    public int descTextMapHash;
+    public int stepDescTextMapHash;
+    public int guideTipsTextMapHash;
     @TsvColumnName("显示状态")
     QuestShowType showType;
     @TsvColumnName("[领取条件]组合")
