@@ -165,11 +165,12 @@ public class TsvParser {
         //[Non-Primitive Type, multiple] number related list, like `[finishExec]1param1`
         if (!isPrimitive(tClass)) {
             List<Object> list = new ArrayList<>();
+            int retryCount = 5; //TODO: make it configurable
             for (int i = 1; ; ++i) {
                 var base = "%s[%s]%d".formatted(prefix, fieldName, i);
                 var object = createObject(tClass, base);
                 if (object != null) list.add(object);
-                else break;
+                else if (retryCount-- <= 0) break;
             }
             if (list.isEmpty()) return null;
             else return list;
