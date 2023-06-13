@@ -1,157 +1,72 @@
 {
-  "id": 73137,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": false,
-  "luaPath": "Actor/Quest/WQ73137",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    210008
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7313701,
-      "mainId": 73137,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_PLAYER_ENTER_REGION",
-          "param": [
-            133302563,
-            563003
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7302515,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_GAME_TIME_TICK",
-          "paramStr": "0,24",
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": false,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": true
-    },
-    {
-      "subId": 7313702,
-      "mainId": 73137,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7313701,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_GADGET_STATE_CHANGE",
-          "param": [
-            133302563,
-            563001
-          ],
-          "paramStr": "201",
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
-          "param": [
-            "3",
-            "133302563,2"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        20677
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": true
-    },
-    {
-      "subId": 7313703,
-      "mainId": 73137,
-      "order": 3,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7313702,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7313701
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_INC_QUEST_GLOBAL_VAR",
-          "param": [
-            "73100",
-            "1"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
-          "param": [
-            "3",
-            "133302563,3"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        20677
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": true
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+  "id" : 73137,
+  "taskType" : "WQ",
+  "luaPath" : "Actor/Quest/WQ73137",
+  "rewardIdList" : [ 210008 ],
+  "subQuests" : [ {
+    "subId" : 7313701,
+    "mainId" : 73137,
+    "order" : 1,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_PLAYER_ENTER_REGION",
+      "param" : [ 133302563, 563003 ]
+    }, {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7302515, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_GAME_TIME_TICK",
+      "paramStr" : "0,24"
+    } ],
+    "refreshNonCoopOnly" : true
+  }, {
+    "subId" : 7313702,
+    "mainId" : 73137,
+    "order" : 2,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7313701, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_GADGET_STATE_CHANGE",
+      "param" : [ 133302563, 563001 ],
+      "paramStr" : "201"
+    } ],
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "3", "133302563,2" ]
+    } ],
+    "exclusiveNpcList" : [ 20677 ],
+    "exclusiveNpcPriority" : 1100,
+    "refreshNonCoopOnly" : true
+  }, {
+    "subId" : 7313703,
+    "mainId" : 73137,
+    "order" : 3,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7313702, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7313701 ]
+    } ],
+    "finishParent" : true,
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_INC_QUEST_GLOBAL_VAR",
+      "param" : [ "73100", "1" ]
+    }, {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "3", "133302563,3" ]
+    } ],
+    "exclusiveNpcList" : [ 20677 ],
+    "exclusiveNpcPriority" : 1100,
+    "refreshNonCoopOnly" : true
+  } ]
 }

@@ -1,62 +1,30 @@
 {
-  "id": 71068,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": false,
-  "luaPath": "Actor/Quest/WQ71068",
-  "recommendLevel": 0,
-  "repeatable": true,
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7106801,
-      "mainId": 71068,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7183105,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            6216402
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": true,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "gainItems": [
-        {
-          "id": 101657,
-          "count": 1
-        }
-      ],
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "7106801"
-          ]
-        }
-      ],
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+  "id" : 71068,
+  "taskType" : "WQ",
+  "luaPath" : "Actor/Quest/WQ71068",
+  "repeatable" : true,
+  "subQuests" : [ {
+    "subId" : 7106801,
+    "mainId" : 71068,
+    "order" : 1,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7183105, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 6216402 ]
+    } ],
+    "showGuide" : "QUEST_GUIDE_ITEM_DISABLE",
+    "isRewind" : true,
+    "gainItems" : [ {
+      "id" : 101657,
+      "count" : 1
+    } ],
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "7106801" ]
+    } ]
+  } ]
 }

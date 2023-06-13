@@ -1,186 +1,92 @@
 {
-  "id": 22117,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "IQ",
-  "enabled": false,
-  "luaPath": "Actor/Quest/IQ22117",
-  "recommendLevel": 0,
-  "repeatable": true,
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 2211701,
-      "mainId": 22117,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_DAILY_TASK_START",
-          "param": [
-            28300
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            2211701
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "2093"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_START",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE_RANDOM",
-          "param": [
-            "3",
-            "133103906,2,3,4,5"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        2093
-      ],
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
+  "id" : 22117,
+  "taskType" : "IQ",
+  "luaPath" : "Actor/Quest/IQ22117",
+  "repeatable" : true,
+  "eventId" : 28300,
+  "subQuests" : [ {
+    "subId" : 2211701,
+    "mainId" : 22117,
+    "order" : 1,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_DAILY_TASK_START",
+      "param" : [ 28300 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 2211701 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "2093" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_START",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 2211702,
-      "mainId": 22117,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_DAILY_TASK_START",
-          "param": [
-            28300
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            2211701,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_OBTAIN_ITEM",
-          "param": [
-            100512
-          ],
-          "count": 1
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "param": [
-          "Q22117Target",
-          "40"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "exclusiveNpcList": [
-        2093
-      ],
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE_RANDOM",
+      "param" : [ "3", "133103906,2,3,4,5" ]
+    } ],
+    "exclusiveNpcList" : [ 2093 ]
+  }, {
+    "subId" : 2211702,
+    "mainId" : 22117,
+    "order" : 2,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_DAILY_TASK_START",
+      "param" : [ 28300 ]
+    }, {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 2211701, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_OBTAIN_ITEM",
+      "param" : [ 100512 ],
+      "count" : 1
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "param" : [ "Q22117Target", "40" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 2211703,
-      "mainId": 22117,
-      "order": 3,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_DAILY_TASK_START",
-          "param": [
-            28300
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            2211702,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            2211703
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "2093"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_FINISH",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_NOTIFY_DAILY_TASK",
-          "param": [
-            "28300"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_DEL_ALL_SPECIFIC_PACK_ITEM",
-          "param": [
-            "100512"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        2093
-      ],
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 28300,
-  "associateActivity": 0
+    "isRewind" : true,
+    "exclusiveNpcList" : [ 2093 ]
+  }, {
+    "subId" : 2211703,
+    "mainId" : 22117,
+    "order" : 3,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_DAILY_TASK_START",
+      "param" : [ 28300 ]
+    }, {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 2211702, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 2211703 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "2093" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_FINISH",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
+    },
+    "finishParent" : true,
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_NOTIFY_DAILY_TASK",
+      "param" : [ "28300" ]
+    }, {
+      "type" : "QUEST_EXEC_DEL_ALL_SPECIFIC_PACK_ITEM",
+      "param" : [ "100512" ]
+    } ],
+    "exclusiveNpcList" : [ 2093 ]
+  } ]
 }

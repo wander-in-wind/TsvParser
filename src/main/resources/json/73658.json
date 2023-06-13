@@ -1,107 +1,55 @@
 {
-  "id": 73658,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/WQ73658",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7365801,
-      "mainId": 73658,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_CITY_REPUTATION_REQUEST",
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_ITEM_GIVING",
-          "param": [
-            7365801
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "4061"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_ACTIVE_ITEM_GIVING",
-          "param": [
-            "7365801"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        4061
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+  "id" : 73658,
+  "taskType" : "WQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/WQ73658",
+  "subQuests" : [ {
+    "subId" : 7365801,
+    "mainId" : 73658,
+    "order" : 1,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_CITY_REPUTATION_REQUEST"
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_ITEM_GIVING",
+      "param" : [ 7365801 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "4061" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 7365802,
-      "mainId": 73658,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7365801,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7365802
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "4061"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "exclusiveNpcList": [
-        4061
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_ACTIVE_ITEM_GIVING",
+      "param" : [ "7365801" ]
+    } ],
+    "exclusiveNpcList" : [ 4061 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7365802,
+    "mainId" : 73658,
+    "order" : 2,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7365801, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7365802 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "4061" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
+    },
+    "finishParent" : true,
+    "isRewind" : true,
+    "exclusiveNpcList" : [ 4061 ],
+    "exclusiveNpcPriority" : 1100
+  } ]
 }

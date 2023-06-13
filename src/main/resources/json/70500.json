@@ -1,794 +1,399 @@
 {
-  "id": 70500,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/WQ70500",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    170500
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7050001,
-      "mainId": 70500,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050011,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            7050001
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105038"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
-          "param": [
-            "3",
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
-          "param": [
-            "3",
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
-          "param": [
-            "3",
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+  "id" : 70500,
+  "taskType" : "WQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/WQ70500",
+  "rewardIdList" : [ 170500 ],
+  "activityType" : "NEW_ACTIVITY_LUNA_RITE",
+  "subQuests" : [ {
+    "subId" : 7050001,
+    "mainId" : 70500,
+    "order" : 2,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050011, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 7050001 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050002,
-      "mainId": 70500,
-      "order": 3,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050001,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
-          "paramStr": "7050002finish",
-          "count": 1
-        }
-      ],
-      "showGuide": true,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "gainItems": [
-        {
-          "id": 100967,
-          "count": 1
-        }
-      ],
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105041"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105038" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+      "param" : [ "3", "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+      "param" : [ "3", "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+      "param" : [ "3", "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050002,
+    "mainId" : 70500,
+    "order" : 3,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050001, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_LUA_NOTIFY",
+      "paramStr" : "7050002finish",
+      "count" : 1
+    } ],
+    "showGuide" : "QUEST_GUIDE_ITEM_DISABLE",
+    "isRewind" : true,
+    "gainItems" : [ {
+      "id" : 100967,
+      "count" : 1
+    } ],
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105041" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    }, {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050003,
+    "mainId" : 70500,
+    "order" : 4,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050002, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_ITEM_GIVING",
+      "param" : [ 7050001 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050003,
-      "mainId": 70500,
-      "order": 4,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050002,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_ITEM_GIVING",
-          "param": [
-            7050001
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105038"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_ACTIVE_ITEM_GIVING",
-          "param": [
-            "7050001"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105038" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_ACTIVE_ITEM_GIVING",
+      "param" : [ "7050001" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050004,
+    "mainId" : 70500,
+    "order" : 8,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050010, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_LUA_NOTIFY",
+      "paramStr" : "7050004finish",
+      "count" : 1
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_LUA_NOTIFY",
+      "paramStr" : "7050004fail",
+      "count" : 1
+    } ],
+    "showGuide" : "QUEST_GUIDE_ITEM_DISABLE",
+    "isRewind" : true,
+    "gainItems" : [ {
+      "id" : 100968,
+      "count" : 3
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    }, {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050005,
+    "mainId" : 70500,
+    "order" : 10,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050004, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_ITEM_GIVING",
+      "param" : [ 7050002 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050004,
-      "mainId": 70500,
-      "order": 8,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050010,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
-          "paramStr": "7050004finish",
-          "count": 1
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
-          "paramStr": "7050004fail",
-          "count": 1
-        }
-      ],
-      "showGuide": true,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "gainItems": [
-        {
-          "id": 100968,
-          "count": 3
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_ACTIVE_ITEM_GIVING",
+      "param" : [ "7050002" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050006,
+    "mainId" : 70500,
+    "order" : 9,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050004, 4 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7050004 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050005,
-      "mainId": 70500,
-      "order": 10,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050004,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_ITEM_GIVING",
-          "param": [
-            7050002
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_ACTIVE_ITEM_GIVING",
-          "param": [
-            "7050002"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133105041" ]
+    }, {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "7050010" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050007,
+    "mainId" : 70500,
+    "order" : 5,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050003, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7050005 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050006,
-      "mainId": 70500,
-      "order": 9,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050004,
-            4
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7050004
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133105041"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "7050010"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050008,
+    "mainId" : 70500,
+    "order" : 11,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050005, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7050007 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050007,
-      "mainId": 70500,
-      "order": 5,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050003,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7050005
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
+    "finishParent" : true,
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+      "param" : [ "133105038", "1" ]
+    }, {
+      "type" : "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+      "param" : [ "133105041" ]
+    }, {
+      "type" : "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+      "param" : [ "133105043" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050009,
+    "mainId" : 70500,
+    "order" : 6,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050007, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7050009 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "10258" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 7050008,
-      "mainId": 70500,
-      "order": 11,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050005,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7050007
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
-          "param": [
-            "133105038",
-            "1"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
-          "param": [
-            "133105041"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
-          "param": [
-            "133105043"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 7050009,
-      "mainId": 70500,
-      "order": 6,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050007,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7050009
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "10258"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 7050010,
-      "mainId": 70500,
-      "order": 7,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7050009,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            7050010
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": true,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105043"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105038"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133105041"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10258
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 7050011,
-      "mainId": 70500,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_ACTIVITY_COND",
-          "param": [
-            2007005,
-            1
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            7050011
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": true
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0,
-  "activityType": "NEW_ACTIVITY_LUNA_RITE"
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050010,
+    "mainId" : 70500,
+    "order" : 7,
+    "isMpBlock" : true,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7050009, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 7050010 ]
+    } ],
+    "showGuide" : "QUEST_GUIDE_ITEM_DISABLE",
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105043" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105038" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133105041" ]
+    } ],
+    "exclusiveNpcList" : [ 10258 ],
+    "exclusiveNpcPriority" : 1100
+  }, {
+    "subId" : 7050011,
+    "mainId" : 70500,
+    "order" : 1,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_ACTIVITY_COND",
+      "param" : [ 2007005, 1 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 7050011 ]
+    } ],
+    "isRewind" : true,
+    "refreshNonCoopOnly" : true
+  } ]
 }

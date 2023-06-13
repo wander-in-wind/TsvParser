@@ -1,99 +1,45 @@
 {
-  "id": 71650,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/WQ71650",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    171650
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7165001,
-      "mainId": 71650,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
-          "param": [
-            25
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
-          "param": [
-            10005,
-            1
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7165001
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "2457"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_START"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
+  "id" : 71650,
+  "taskType" : "WQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/WQ71650",
+  "rewardIdList" : [ 171650 ],
+  "subQuests" : [ {
+    "subId" : 7165001,
+    "mainId" : 71650,
+    "order" : 1,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
+      "param" : [ 25 ]
+    }, {
+      "type" : "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
+      "param" : [ 10005, 1 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7165001 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "2457" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_START"
     },
-    {
-      "subId": 7165002,
-      "mainId": 71650,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7165001,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7165002
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": false,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+    "isRewind" : true
+  }, {
+    "subId" : 7165002,
+    "mainId" : 71650,
+    "order" : 2,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7165001, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7165002 ]
+    } ],
+    "finishParent" : true
+  } ]
 }

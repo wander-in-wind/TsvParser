@@ -1,115 +1,53 @@
 {
-  "id": 70650,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/WQ70650",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    170650
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7065001,
-      "mainId": 70650,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
-          "param": [
-            25
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
-          "param": [
-            10001,
-            1
-          ],
-          "count": 0
-        }
-      ],
-      "finishCondComb": "LOGIC_OR",
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7065001
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7065003
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "1663"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_START"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
+  "id" : 70650,
+  "taskType" : "WQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/WQ70650",
+  "rewardIdList" : [ 170650 ],
+  "subQuests" : [ {
+    "subId" : 7065001,
+    "mainId" : 70650,
+    "order" : 1,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
+      "param" : [ 25 ]
+    }, {
+      "type" : "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
+      "param" : [ 10001, 1 ]
+    } ],
+    "finishCondComb" : "LOGIC_OR",
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7065001 ]
+    }, {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7065003 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "1663" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_START"
     },
-    {
-      "subId": 7065002,
-      "mainId": 70650,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7065001,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCondComb": "LOGIC_OR",
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7065002
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7065004
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": false,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+    "isRewind" : true
+  }, {
+    "subId" : 7065002,
+    "mainId" : 70650,
+    "order" : 2,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7065001, 3 ]
+    } ],
+    "finishCondComb" : "LOGIC_OR",
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7065002 ]
+    }, {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7065004 ]
+    } ],
+    "finishParent" : true
+  } ]
 }

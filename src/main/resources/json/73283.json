@@ -1,86 +1,38 @@
 {
-  "id": 73283,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": false,
-  "luaPath": "Actor/Quest/WQ73283",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7328301,
-      "mainId": 73283,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "param": [
-            1,
-            11,
-            2
-          ],
-          "count": 0
-        }
-      ],
-      "finishCondComb": "LOGIC_OR",
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_GADGET_STATE_CHANGE",
-          "param": [
-            133303657,
-            657002
-          ],
-          "paramStr": "102",
-          "count": 0
-        },
-        {
-          "type": "QUEST_CONTENT_GADGET_STATE_CHANGE",
-          "param": [
-            133303657,
-            657008
-          ],
-          "paramStr": "201",
-          "count": 0
-        }
-      ],
-      "showGuide": true,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_MODIFY_ARANARA_COLLECTION_STATE",
-          "param": [
-            "1",
-            "11",
-            "3"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
-          "param": [
-            "133303657",
-            "1"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
-          "param": [
-            "3",
-            "133303657"
-          ]
-        }
-      ],
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+  "id" : 73283,
+  "taskType" : "WQ",
+  "luaPath" : "Actor/Quest/WQ73283",
+  "subQuests" : [ {
+    "subId" : 7328301,
+    "mainId" : 73283,
+    "order" : 1,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_UNKNOWN_80",
+      "param" : [ 1, 11, 2 ]
+    } ],
+    "finishCondComb" : "LOGIC_OR",
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_GADGET_STATE_CHANGE",
+      "param" : [ 133303657, 657002 ],
+      "paramStr" : "102"
+    }, {
+      "type" : "QUEST_CONTENT_GADGET_STATE_CHANGE",
+      "param" : [ 133303657, 657008 ],
+      "paramStr" : "201"
+    } ],
+    "showGuide" : "QUEST_GUIDE_ITEM_DISABLE",
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_MODIFY_ARANARA_COLLECTION_STATE",
+      "param" : [ "1", "11", "3" ]
+    }, {
+      "type" : "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+      "param" : [ "133303657", "1" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+      "param" : [ "3", "133303657" ]
+    } ]
+  } ]
 }

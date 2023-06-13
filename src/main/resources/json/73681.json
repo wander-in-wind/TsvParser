@@ -1,83 +1,41 @@
 {
-  "id": 73681,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": false,
-  "luaPath": "Actor/Quest/WQ73681",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    173681
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7368101,
-      "mainId": 73681,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            7051902,
-            3
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_ACTIVITY_COND",
-          "param": [
-            2016019,
-            1
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7368101
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "30234"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_NOTIFY_GROUP_LUA",
-          "param": [
-            "3",
-            "133002149"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        30234,
-        30243,
-        30244
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": true
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 2016,
-  "activityType": "NEW_ACTIVITY_UNKNOWN_3103"
+  "id" : 73681,
+  "taskType" : "WQ",
+  "luaPath" : "Actor/Quest/WQ73681",
+  "rewardIdList" : [ 173681 ],
+  "activityId" : 2016,
+  "activityType" : "NEW_ACTIVITY_UNKNOWN_3103",
+  "subQuests" : [ {
+    "subId" : 7368101,
+    "mainId" : 73681,
+    "order" : 1,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 7051902, 3 ]
+    }, {
+      "type" : "QUEST_COND_ACTIVITY_COND",
+      "param" : [ 2016019, 1 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7368101 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "30234" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
+    },
+    "finishParent" : true,
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
+      "param" : [ "3", "133002149" ]
+    } ],
+    "exclusiveNpcList" : [ 30234, 30243, 30244 ],
+    "exclusiveNpcPriority" : 1100,
+    "refreshNonCoopOnly" : true
+  } ]
 }

@@ -1,331 +1,166 @@
 {
-  "id": 19117,
-  "collectionId": 3008,
-  "series": 105001,
-  "taskType": "LQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/LQ19117",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "chapterId": 105001,
-  "subQuests": [
-    {
-      "subId": 1911701,
-      "mainId": 19117,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
-          "param": [
-            105001,
-            1911701
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
-          "param": [
-            105001,
-            1911702
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "12156"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
-          "param": [
-            "3",
-            "133220695"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        12156,
-        1033
-      ],
-      "exclusivePriority": 1100,
-      "coopPointIdList": [
-        10500109
-      ],
-      "refreshNonCoopOnly": false
+  "id" : 19117,
+  "collectionId" : 3008,
+  "series" : 105001,
+  "taskType" : "LQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/LQ19117",
+  "chapterId" : 105001,
+  "subQuests" : [ {
+    "subId" : 1911701,
+    "mainId" : 19117,
+    "order" : 1,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_MAIN_COOP_ENTER_SAVE_POINT",
+      "param" : [ 105001, 1911701 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+      "param" : [ 105001, 1911702 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "12156" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 1911702,
-      "mainId": 19117,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            1911701,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_LUA_NOTIFY",
-          "paramStr": "191170201",
-          "count": 1
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "Q1911702guide",
-          "20"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
-          "param": [
-            "133213497"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
-          "param": [
-            "3",
-            "133213497"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133220695"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        12156,
-        1033
-      ],
-      "exclusivePriority": 1100,
-      "coopPointIdList": [
-        10500109
-      ],
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+      "param" : [ "3", "133220695" ]
+    } ],
+    "exclusiveNpcList" : [ 12156, 1033 ],
+    "exclusiveNpcPriority" : 1100,
+    "coopPointIdList" : [ 10500109 ]
+  }, {
+    "subId" : 1911702,
+    "mainId" : 19117,
+    "order" : 2,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 1911701, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_LUA_NOTIFY",
+      "paramStr" : "191170201",
+      "count" : 1
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "Q1911702guide", "20" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 1911703,
-      "mainId": 19117,
-      "order": 3,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            1911702,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
-          "param": [
-            105001,
-            1911703
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "12156"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133220695"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        12156,
-        1033
-      ],
-      "exclusivePriority": 1100,
-      "coopPointIdList": [
-        10500109
-      ],
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+      "param" : [ "133213497" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP",
+      "param" : [ "3", "133213497" ]
+    }, {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133220695" ]
+    } ],
+    "exclusiveNpcList" : [ 12156, 1033 ],
+    "exclusiveNpcPriority" : 1100,
+    "coopPointIdList" : [ 10500109 ]
+  }, {
+    "subId" : 1911703,
+    "mainId" : 19117,
+    "order" : 3,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 1911702, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+      "param" : [ 105001, 1911703 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "12156" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 1911704,
-      "mainId": 19117,
-      "order": 4,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            1911703,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
-          "param": [
-            105001,
-            1911704
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "12159"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133220695"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        12156,
-        12159,
-        1033
-      ],
-      "exclusivePriority": 1100,
-      "exclusivePlaceList": [
-        1911101
-      ],
-      "coopPointIdList": [
-        10500110
-      ],
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133220695" ]
+    } ],
+    "exclusiveNpcList" : [ 12156, 1033 ],
+    "exclusiveNpcPriority" : 1100,
+    "coopPointIdList" : [ 10500109 ]
+  }, {
+    "subId" : 1911704,
+    "mainId" : 19117,
+    "order" : 4,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 1911703, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+      "param" : [ 105001, 1911704 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "12159" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 1911705,
-      "mainId": 19117,
-      "order": 5,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            1911704,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
-          "param": [
-            105001,
-            1911705
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "12280"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
-          "param": [
-            "133220695"
-          ]
-        }
-      ],
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
-          "param": [
-            "133220695"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        12156,
-        1033
-      ],
-      "exclusivePriority": 1100,
-      "coopPointIdList": [
-        10500110
-      ],
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133220695" ]
+    } ],
+    "exclusiveNpcList" : [ 12156, 12159, 1033 ],
+    "exclusiveNpcPriority" : 1100,
+    "exclusivePlaceList" : [ 1911101 ],
+    "coopPointIdList" : [ 10500110 ]
+  }, {
+    "subId" : 1911705,
+    "mainId" : 19117,
+    "order" : 5,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 1911704, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_MAIN_COOP_ENTER_SAVE_POINT",
+      "param" : [ 105001, 1911705 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "12280" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
+    },
+    "finishParent" : true,
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_UNREGISTER_DYNAMIC_GROUP",
+      "param" : [ "133220695" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REGISTER_DYNAMIC_GROUP_ONLY",
+      "param" : [ "133220695" ]
+    } ],
+    "exclusiveNpcList" : [ 12156, 1033 ],
+    "exclusiveNpcPriority" : 1100,
+    "coopPointIdList" : [ 10500110 ]
+  } ]
 }

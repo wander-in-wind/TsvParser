@@ -1,125 +1,56 @@
 {
-  "id": 25009,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": true,
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    125009
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 2500901,
-      "mainId": 25009,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            2500801,
-            3
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
-          "param": [
-            45
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
-          "param": [
-            2014,
-            48
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "param": [
-          "Q25009Target"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
+  "id" : 25009,
+  "taskType" : "WQ",
+  "enabled" : true,
+  "rewardIdList" : [ 125009 ],
+  "subQuests" : [ {
+    "subId" : 2500901,
+    "mainId" : 25009,
+    "order" : 1,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 2500801, 3 ]
+    }, {
+      "type" : "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
+      "param" : [ 45 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_ENTER_DUNGEON",
+      "param" : [ 2014, 48 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "param" : [ "Q25009Target" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 2500902,
-      "mainId": 25009,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            2500901,
-            3
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
-          "param": [
-            45
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_DUNGEON",
-          "param": [
-            2014,
-            48
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2014
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": false,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "2500901"
-          ]
-        }
-      ],
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+    "isRewind" : true
+  }, {
+    "subId" : 2500902,
+    "mainId" : 25009,
+    "order" : 2,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 2500901, 3 ]
+    }, {
+      "type" : "QUEST_COND_PLAYER_LEVEL_EQUAL_GREATER",
+      "param" : [ 45 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_DUNGEON",
+      "param" : [ 2014, 48 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2014 ]
+    } ],
+    "finishParent" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "2500901" ]
+    } ]
+  } ]
 }

@@ -1,191 +1,84 @@
 {
-  "id": 40007,
-  "collectionId": 0,
-  "series": 10001,
-  "taskType": "EQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/EQ40007",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 4000703,
-      "mainId": 40007,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            4000205,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            4000703
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": false,
-      "exclusiveNpcList": [
-        10205
-      ],
-      "exclusivePriority": 1050,
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 4000701,
-      "mainId": 40007,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            4000703,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            4000701
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_NOT_FINISH_PLOT",
-          "param": [
-            4000701
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "exclusiveNpcList": [
-        10205
-      ],
-      "exclusivePriority": 1050,
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 4000702,
-      "mainId": 40007,
-      "order": 3,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            4000701,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            4000702
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_NOT_FINISH_PLOT",
-          "param": [
-            4000702
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": false,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "4000701"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        10205
-      ],
-      "exclusivePriority": 1050,
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 4000704,
-      "mainId": 40007,
-      "order": 4,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            4000703,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            4000704
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_NOT_FINISH_PLOT",
-          "param": [
-            4000701
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": false,
-      "exclusivePriority": 0,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+  "id" : 40007,
+  "series" : 10001,
+  "taskType" : "EQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/EQ40007",
+  "subQuests" : [ {
+    "subId" : 4000703,
+    "mainId" : 40007,
+    "order" : 1,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 4000205, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 4000703 ]
+    } ],
+    "exclusiveNpcList" : [ 10205 ],
+    "exclusiveNpcPriority" : 1050
+  }, {
+    "subId" : 4000701,
+    "mainId" : 40007,
+    "order" : 2,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 4000703, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 4000701 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_NOT_FINISH_PLOT",
+      "param" : [ 4000701 ]
+    } ],
+    "isRewind" : true,
+    "exclusiveNpcList" : [ 10205 ],
+    "exclusiveNpcPriority" : 1050
+  }, {
+    "subId" : 4000702,
+    "mainId" : 40007,
+    "order" : 3,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 4000701, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 4000702 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_NOT_FINISH_PLOT",
+      "param" : [ 4000702 ]
+    } ],
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "4000701" ]
+    } ],
+    "exclusiveNpcList" : [ 10205 ],
+    "exclusiveNpcPriority" : 1050
+  }, {
+    "subId" : 4000704,
+    "mainId" : 40007,
+    "order" : 4,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 4000703, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 4000704 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_NOT_FINISH_PLOT",
+      "param" : [ 4000701 ]
+    } ],
+    "finishParent" : true
+  } ]
 }

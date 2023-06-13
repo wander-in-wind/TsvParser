@@ -1,762 +1,372 @@
 {
-  "id": 485,
-  "collectionId": 2003,
-  "series": 2003,
-  "taskType": "LQ",
-  "enabled": true,
-  "luaPath": "Actor/Quest/LQ485",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    100485
-  ],
-  "chapterId": 2003,
-  "subQuests": [
-    {
-      "subId": 48501,
-      "mainId": 485,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48423,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
-          "param": [
-            2007,
-            102
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "param": [
-          "Q485Entrance"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_POINT",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
-          "param": [
-            "3",
-            "133002807,2"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "refreshNonCoopOnly": false
+  "id" : 485,
+  "collectionId" : 2003,
+  "series" : 2003,
+  "taskType" : "LQ",
+  "enabled" : true,
+  "luaPath" : "Actor/Quest/LQ485",
+  "rewardIdList" : [ 100485 ],
+  "chapterId" : 2003,
+  "subQuests" : [ {
+    "subId" : 48501,
+    "mainId" : 485,
+    "order" : 1,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48423, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_ENTER_DUNGEON",
+      "param" : [ 2007, 102 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "param" : [ "Q485Entrance" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_POINT",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 48511,
-      "mainId": 485,
-      "order": 2,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48501,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            48511
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2007
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "3", "133002807,2" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080
+  }, {
+    "subId" : 48511,
+    "mainId" : 485,
+    "order" : 2,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48501, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 48511 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2007 ]
+    } ],
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080
+  }, {
+    "subId" : 48509,
+    "mainId" : 485,
+    "order" : 3,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48511, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_CLEAR_GROUP_MONSTER",
+      "param" : [ 201015003 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2007 ]
+    } ],
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080
+  }, {
+    "subId" : 48512,
+    "mainId" : 485,
+    "order" : 4,
+    "isMpBlock" : true,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48509, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 48512 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2007 ]
+    } ],
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080
+  }, {
+    "subId" : 48510,
+    "mainId" : 485,
+    "order" : 5,
+    "isMpBlock" : true,
+    "showType" : "QUEST_HIDDEN",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48512, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_ENTER_DUNGEON",
+      "param" : [ 2006 ]
+    } ],
+    "failCondComb" : "LOGIC_OR",
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2007 ]
+    }, {
+      "type" : "QUEST_CONTENT_ENTER_MY_WORLD",
+      "param" : [ 3 ]
+    } ],
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_GRANT_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    } ],
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "trialAvatarList" : [ 8 ]
+  }, {
+    "subId" : 48502,
+    "mainId" : 485,
+    "order" : 6,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48510, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 48502 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2006 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "param" : [ "Q48503Ambor" ],
+      "guideScene" : 1016
     },
-    {
-      "subId": 48509,
-      "mainId": 485,
-      "order": 3,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48511,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_CLEAR_GROUP_MONSTER",
-          "param": [
-            201015003
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2007
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "refreshNonCoopOnly": false
+    "showGuide" : "QUEST_GUIDE_ITEM_DISABLE",
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    }, {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "trialAvatarList" : [ 8 ]
+  }, {
+    "subId" : 48503,
+    "mainId" : 485,
+    "order" : 7,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48502, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 48503 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2006 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "1002" ],
+      "guideScene" : 1016,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 48512,
-      "mainId": 485,
-      "order": 4,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48509,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            48512
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2007
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    }, {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "trialAvatarList" : [ 8 ]
+  }, {
+    "subId" : 48504,
+    "mainId" : 485,
+    "order" : 8,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48503, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_FINISH_PLOT",
+      "param" : [ 48504 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2006 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "param" : [ "Q48504Area" ],
+      "guideScene" : 1016,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_UI"
     },
-    {
-      "subId": 48510,
-      "mainId": 485,
-      "order": 5,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "showType": "QUEST_HIDDEN",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48512,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_ENTER_DUNGEON",
-          "param": [
-            2006
-          ],
-          "count": 0
-        }
-      ],
-      "failCondComb": "LOGIC_OR",
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2007
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_CONTENT_ENTER_MY_WORLD",
-          "param": [
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_GRANT_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        }
-      ],
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "trialAvatarList": [
-        8
-      ],
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    }, {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "trialAvatarList" : [ 8 ]
+  }, {
+    "subId" : 48505,
+    "mainId" : 485,
+    "order" : 9,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48504, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_CLEAR_GROUP_MONSTER",
+      "param" : [ 201016005 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2006 ]
+    } ],
+    "isRewind" : true,
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    }, {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "trialAvatarList" : [ 8 ]
+  }, {
+    "subId" : 48506,
+    "mainId" : 485,
+    "order" : 10,
+    "isMpBlock" : true,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48505, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 48506 ]
+    } ],
+    "failCond" : [ {
+      "type" : "QUEST_CONTENT_FAIL_DUNGEON",
+      "param" : [ 2006 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "1002" ],
+      "guideScene" : 1016,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 48502,
-      "mainId": 485,
-      "order": 6,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48510,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            48502
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2006
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "param": [
-          "Q48503Ambor"
-        ],
-        "guideScene": 1016
-      },
-      "showGuide": true,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "trialAvatarList": [
-        8
-      ],
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    }, {
+      "type" : "QUEST_EXEC_LOCK_POINT",
+      "param" : [ "3", "102" ]
+    } ],
+    "failExec" : [ {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "48501" ]
+    }, {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "8" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "trialAvatarList" : [ 8 ]
+  }, {
+    "subId" : 48507,
+    "mainId" : 485,
+    "order" : 11,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48506, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_ENTER_ROOM",
+      "param" : [ 1008 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_LOCATION",
+      "param" : [ "Q48508Ambor" ],
+      "guideScene" : 1008
     },
-    {
-      "subId": 48503,
-      "mainId": 485,
-      "order": 7,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48502,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            48503
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2006
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "1002"
-        ],
-        "guideScene": 1016,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "trialAvatarList": [
-        8
-      ],
-      "refreshNonCoopOnly": false
+    "isRewind" : true,
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "3", "133002807,1" ]
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "exclusivePlaceList" : [ 305 ]
+  }, {
+    "subId" : 48508,
+    "mainId" : 485,
+    "order" : 12,
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_STATE_EQUAL",
+      "param" : [ 48507, 3 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 48508 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "param" : [ "1002" ],
+      "guideScene" : 1008,
+      "guideStyle" : "QUEST_GUIDE_STYLE_TARGET",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
-    {
-      "subId": 48504,
-      "mainId": 485,
-      "order": 8,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48503,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_FINISH_PLOT",
-          "param": [
-            48504
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2006
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "param": [
-          "Q48504Area"
-        ],
-        "guideScene": 1016,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_UI"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "trialAvatarList": [
-        8
-      ],
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 48505,
-      "mainId": 485,
-      "order": 9,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48504,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_CLEAR_GROUP_MONSTER",
-          "param": [
-            201016005
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2006
-          ],
-          "count": 0
-        }
-      ],
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "trialAvatarList": [
-        8
-      ],
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 48506,
-      "mainId": 485,
-      "order": 10,
-      "subQuestGroup": 0,
-      "isMpBlock": true,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48505,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            48506
-          ],
-          "count": 0
-        }
-      ],
-      "failCond": [
-        {
-          "type": "QUEST_CONTENT_FAIL_DUNGEON",
-          "param": [
-            2006
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "1002"
-        ],
-        "guideScene": 1016,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_LOCK_POINT",
-          "param": [
-            "3",
-            "102"
-          ]
-        }
-      ],
-      "failExec": [
-        {
-          "type": "QUEST_EXEC_ROLLBACK_QUEST",
-          "param": [
-            "48501"
-          ]
-        },
-        {
-          "type": "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
-          "param": [
-            "8"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "trialAvatarList": [
-        8
-      ],
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 48507,
-      "mainId": 485,
-      "order": 11,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48506,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_ENTER_ROOM",
-          "param": [
-            1008
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_LOCATION",
-        "param": [
-          "Q48508Ambor"
-        ],
-        "guideScene": 1008
-      },
-      "showGuide": false,
-      "finishParent": false,
-      "failParent": false,
-      "isRewind": true,
-      "beginExec": [
-        {
-          "type": "QUEST_EXEC_REFRESH_GROUP_SUITE",
-          "param": [
-            "3",
-            "133002807,1"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "exclusivePlaceList": [
-        305
-      ],
-      "refreshNonCoopOnly": false
-    },
-    {
-      "subId": 48508,
-      "mainId": 485,
-      "order": 12,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_STATE_EQUAL",
-          "param": [
-            48507,
-            3
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            48508
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "param": [
-          "1002"
-        ],
-        "guideScene": 1008,
-        "guideStyle": "QUEST_GUIDE_STYLE_TARGET",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "gainItems": [
-        {
-          "id": 100236,
-          "count": 1
-        }
-      ],
-      "exclusiveNpcList": [
-        1002
-      ],
-      "exclusivePriority": 1080,
-      "exclusivePlaceList": [
-        305
-      ],
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+    "finishParent" : true,
+    "isRewind" : true,
+    "gainItems" : [ {
+      "id" : 100236,
+      "count" : 1
+    } ],
+    "exclusiveNpcList" : [ 1002 ],
+    "exclusiveNpcPriority" : 1080,
+    "exclusivePlaceList" : [ 305 ]
+  } ]
 }

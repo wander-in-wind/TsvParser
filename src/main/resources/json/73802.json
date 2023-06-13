@@ -1,81 +1,39 @@
 {
-  "id": 73802,
-  "collectionId": 0,
-  "series": 0,
-  "taskType": "WQ",
-  "enabled": false,
-  "luaPath": "Actor/Quest/WQ73802",
-  "recommendLevel": 0,
-  "repeatable": false,
-  "rewardIdList": [
-    173802
-  ],
-  "chapterId": 0,
-  "subQuests": [
-    {
-      "subId": 7380201,
-      "mainId": 73802,
-      "order": 1,
-      "subQuestGroup": 0,
-      "isMpBlock": false,
-      "acceptCondComb": "LOGIC_AND",
-      "acceptCond": [
-        {
-          "type": "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
-          "param": [
-            301409,
-            1
-          ],
-          "count": 0
-        },
-        {
-          "type": "QUEST_COND_TIME_VAR_PASS_DAY",
-          "param": [
-            3013,
-            1
-          ],
-          "count": 0
-        }
-      ],
-      "finishCond": [
-        {
-          "type": "QUEST_CONTENT_COMPLETE_TALK",
-          "param": [
-            7380201
-          ],
-          "count": 0
-        }
-      ],
-      "guide": {
-        "type": "QUEST_GUIDE_NPC",
-        "autoGuide": "QUEST_GUIDE_AUTO_ENABLE",
-        "param": [
-          "4019"
-        ],
-        "guideScene": 3,
-        "guideStyle": "QUEST_GUIDE_STYLE_START",
-        "guideLayer": "QUEST_GUIDE_LAYER_SCENE"
-      },
-      "showGuide": false,
-      "finishParent": true,
-      "failParent": false,
-      "isRewind": true,
-      "finishExec": [
-        {
-          "type": "QUEST_EXEC_CLEAR_TIME_VAR",
-          "param": [
-            "3013",
-            "0"
-          ]
-        }
-      ],
-      "exclusiveNpcList": [
-        4019
-      ],
-      "exclusivePriority": 1100,
-      "refreshNonCoopOnly": false
-    }
-  ],
-  "eventId": 0,
-  "associateActivity": 0
+  "id" : 73802,
+  "taskType" : "WQ",
+  "luaPath" : "Actor/Quest/WQ73802",
+  "rewardIdList" : [ 173802 ],
+  "subQuests" : [ {
+    "subId" : 7380201,
+    "mainId" : 73802,
+    "order" : 1,
+    "acceptCondComb" : "LOGIC_AND",
+    "acceptCond" : [ {
+      "type" : "QUEST_COND_QUEST_GLOBAL_VAR_EQUAL",
+      "param" : [ 301409, 1 ]
+    }, {
+      "type" : "QUEST_COND_TIME_VAR_PASS_DAY",
+      "param" : [ 3013, 1 ]
+    } ],
+    "finishCond" : [ {
+      "type" : "QUEST_CONTENT_COMPLETE_TALK",
+      "param" : [ 7380201 ]
+    } ],
+    "guide" : {
+      "type" : "QUEST_GUIDE_NPC",
+      "autoGuide" : "QUEST_GUIDE_AUTO_ENABLE",
+      "param" : [ "4019" ],
+      "guideScene" : 3,
+      "guideStyle" : "QUEST_GUIDE_STYLE_START",
+      "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
+    },
+    "finishParent" : true,
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_CLEAR_TIME_VAR",
+      "param" : [ "3013", "0" ]
+    } ],
+    "exclusiveNpcList" : [ 4019 ],
+    "exclusiveNpcPriority" : 1100
+  } ]
 }
