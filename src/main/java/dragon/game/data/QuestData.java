@@ -1,6 +1,5 @@
 package dragon.game.data;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import dragon.game.data.enums.*;
 import dragon.util.tsv.annotations.TsvColumnName;
 import lombok.Data;
@@ -18,11 +17,7 @@ public class QuestData {
     @TsvColumnName("子任务组")
     int subQuestGroup;
     @TsvColumnName("禁止进入联机")
-    @JsonProperty("isMpBlock")
     boolean isMpBlock;
-    public int descTextMapHash;
-    public int stepDescTextMapHash;
-    public int guideTipsTextMapHash;
     @TsvColumnName("显示状态")
     QuestShowType showType;
     @TsvColumnName("[领取条件]组合")
@@ -46,7 +41,6 @@ public class QuestData {
     @TsvColumnName("失败父任务")
     boolean failParent;
     @TsvColumnName("是存档点")
-    @JsonProperty("isRewind")
     boolean isRewind;
     @TsvColumnName("任务道具")
     QuestItem[] gainItems;
@@ -61,7 +55,7 @@ public class QuestData {
     @TsvColumnName("共享NPC")
     int[] sharedNpcList;
     @TsvColumnName("独占优先级")
-    int exclusivePriority;
+    int exclusiveNpcPriority;
     @TsvColumnName("试用角色列表")
     int[] trialAvatarList;
     @TsvColumnName("加载技能组")
@@ -75,8 +69,12 @@ public class QuestData {
     @TsvColumnName("刷新是否限定单机")
     boolean refreshNonCoopOnly;
     @TsvColumnName("关卡映射")
-    String levelMap;
+    String levelMap; //实际上是Map
     //Map<Integer,Integer> levelMap;
+
+    public int descTextMapHash;
+    public int stepDescTextMapHash;
+    public int guideTipsTextMapHash;
 
     @Data
     public static class QuestItem{
