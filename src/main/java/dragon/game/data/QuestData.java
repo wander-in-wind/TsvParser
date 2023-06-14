@@ -101,7 +101,7 @@ public class QuestData {
         @TsvColumnName("参数")
         private int[] param;
         @TsvColumnName("复杂参数")
-        private String paramStr;
+        private String paramString;
         @TsvColumnName("次数")
         private int count;
     }
@@ -113,7 +113,7 @@ public class QuestData {
         @TsvColumnName("参数")
         private int[] param;
         @TsvColumnName("复杂参数")
-        private String paramStr;
+        private String paramString;
         @TsvColumnName("次数")
         private int count;
     }
