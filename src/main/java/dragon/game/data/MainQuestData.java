@@ -2,6 +2,7 @@ package dragon.game.data;
 
 
 import dragon.game.data.enums.ActivityType;
+import dragon.game.data.enums.PlayMode;
 import dragon.game.data.enums.QuestType;
 import dragon.util.tsv.annotations.TsvColumnName;
 import lombok.Data;
@@ -20,7 +21,7 @@ public class MainQuestData {
     @TsvColumnName("任务类型")
     QuestType taskType;
     @TsvColumnName("启用模式")
-    boolean enabled;
+    PlayMode activeMode;
     @TsvColumnName("Lua脚本路径")
     String luaPath;
     @TsvColumnName("推荐等级")
