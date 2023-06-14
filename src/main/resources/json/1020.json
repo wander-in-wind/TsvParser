@@ -3,7 +3,7 @@
   "collectionId" : 1006,
   "series" : 1101,
   "taskType" : "AQ",
-  "enabled" : true,
+  "activeMode" : "PLAY_MODE_SINGLE",
   "luaPath" : "Actor/Quest/MQ1020",
   "rewardIdList" : [ 101020 ],
   "chapterId" : 1103,
@@ -121,7 +121,7 @@
     } ],
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_LUA_NOTIFY",
-      "paramStr" : "10200501",
+      "paramString" : "10200501",
       "count" : 1
     } ],
     "failCondComb" : "LOGIC_OR",
@@ -146,6 +146,9 @@
     "failExec" : [ {
       "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
       "param" : [ "3", "133107108,1" ]
+    }, {
+      "type" : "QUEST_EXEC_ROLLBACK_QUEST",
+      "param" : [ "102004" ]
     } ],
     "beginExec" : [ {
       "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",

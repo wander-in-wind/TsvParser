@@ -3,7 +3,7 @@
   "collectionId" : 1001,
   "series" : 1001,
   "taskType" : "AQ",
-  "enabled" : true,
+  "activeMode" : "PLAY_MODE_SINGLE",
   "luaPath" : "Actor/Quest/AQ358",
   "rewardIdList" : [ 100358 ],
   "chapterId" : 1001,
@@ -19,7 +19,7 @@
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_GAME_TIME_TICK",
       "param" : [ 0 ],
-      "paramStr" : "0,24"
+      "paramString" : "0,24"
     } ]
   }, {
     "subId" : 35801,
@@ -59,6 +59,10 @@
       "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
     "finishParent" : true,
-    "isRewind" : true
+    "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "1004", "201004902,2" ]
+    } ]
   } ]
 }

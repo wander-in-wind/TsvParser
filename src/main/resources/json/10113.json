@@ -3,7 +3,7 @@
   "collectionId" : 2013,
   "series" : 2013,
   "taskType" : "LQ",
-  "enabled" : true,
+  "activeMode" : "PLAY_MODE_SINGLE",
   "luaPath" : "Actor/Quest/LQ10113",
   "rewardIdList" : [ 110113 ],
   "chapterId" : 2013,
@@ -18,7 +18,7 @@
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_GAME_TIME_TICK",
       "param" : [ 0 ],
-      "paramStr" : "18,23"
+      "paramString" : "18,23"
     } ],
     "isRewind" : true
   }, {
@@ -36,7 +36,7 @@
     "failCond" : [ {
       "type" : "QUEST_CONTENT_GAME_TIME_TICK",
       "param" : [ 0 ],
-      "paramStr" : "23,18"
+      "paramString" : "23,18"
     } ],
     "guide" : {
       "type" : "QUEST_GUIDE_LOCATION",
@@ -152,6 +152,10 @@
       "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
     "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_SET_IS_GAME_TIME_LOCKED",
+      "param" : [ "0" ]
+    } ],
     "failExec" : [ {
       "type" : "QUEST_EXEC_ROLLBACK_QUEST",
       "param" : [ "1011300" ]
@@ -181,6 +185,10 @@
       "guideLayer" : "QUEST_GUIDE_LAYER_SCENE"
     },
     "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "1009", "201009003,1" ]
+    } ],
     "exclusiveNpcList" : [ 1001, 1009, 1413, 1411, 1404, 1410, 1412, 1414, 1465, 1475, 1477, 1523, 1603 ],
     "exclusiveNpcPriority" : 1100,
     "exclusivePlaceList" : [ 7267605 ]

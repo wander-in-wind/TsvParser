@@ -2,7 +2,7 @@
   "id" : 11200,
   "collectionId" : 2030,
   "taskType" : "LQ",
-  "enabled" : true,
+  "activeMode" : "PLAY_MODE_SINGLE",
   "luaPath" : "Actor/Quest/LQ11200",
   "rewardIdList" : [ 111200 ],
   "chapterId" : 2015,
@@ -109,7 +109,7 @@
     } ],
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_LUA_NOTIFY",
-      "paramStr" : "133101903",
+      "paramString" : "133101903",
       "count" : 1
     } ],
     "failCondComb" : "LOGIC_OR",
@@ -133,6 +133,10 @@
     "failExec" : [ {
       "type" : "QUEST_EXEC_ROLLBACK_QUEST",
       "param" : [ "1120004" ]
+    } ],
+    "beginExec" : [ {
+      "type" : "QUEST_EXEC_GRANT_TRIAL_AVATAR",
+      "param" : [ "20" ]
     } ],
     "exclusiveNpcList" : [ 10233 ],
     "trialAvatarList" : [ 20 ]
@@ -189,7 +193,7 @@
     } ],
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_LUA_NOTIFY",
-      "paramStr" : "133103909",
+      "paramString" : "133103909",
       "count" : 1
     } ]
   }, {
@@ -255,7 +259,7 @@
     } ],
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_LUA_NOTIFY",
-      "paramStr" : "133101903",
+      "paramString" : "133101903",
       "count" : 1
     } ]
   }, {

@@ -144,7 +144,7 @@
     } ],
     "failCond" : [ {
       "type" : "QUEST_CONTENT_LUA_NOTIFY",
-      "paramStr" : "13300349101",
+      "paramString" : "13300349101",
       "count" : 1
     } ],
     "guide" : {
@@ -156,6 +156,16 @@
     },
     "finishParent" : true,
     "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
+      "param" : [ "3", "133003491,1" ]
+    }, {
+      "type" : "QUEST_EXEC_UPDATE_PARENT_QUEST_REWARD_INDEX",
+      "param" : [ "1" ]
+    }, {
+      "type" : "QUEST_EXEC_NOTIFY_DAILY_TASK",
+      "param" : [ "21700" ]
+    } ],
     "beginExec" : [ {
       "type" : "QUEST_EXEC_NOTIFY_GROUP_LUA",
       "param" : [ "3", "133003491" ]

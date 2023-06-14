@@ -3,7 +3,7 @@
   "collectionId" : 2008,
   "series" : 2008,
   "taskType" : "LQ",
-  "enabled" : true,
+  "activeMode" : "PLAY_MODE_SINGLE",
   "luaPath" : "Actor/Quest/LQ12003",
   "rewardIdList" : [ 112003 ],
   "chapterId" : 2008,
@@ -26,6 +26,10 @@
       "guideStyle" : "QUEST_GUIDE_STYLE_TARGET"
     },
     "isRewind" : true,
+    "finishExec" : [ {
+      "type" : "QUEST_EXEC_REMOVE_TRIAL_AVATAR",
+      "param" : [ "12" ]
+    } ],
     "beginExec" : [ {
       "type" : "QUEST_EXEC_REFRESH_GROUP_SUITE",
       "param" : [ "3", "133107003,1" ]
@@ -138,7 +142,7 @@
     } ],
     "finishCond" : [ {
       "type" : "QUEST_CONTENT_LUA_NOTIFY",
-      "paramStr" : "133107004",
+      "paramString" : "133107004",
       "count" : 1
     } ],
     "failCondComb" : "LOGIC_OR",
