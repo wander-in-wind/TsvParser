@@ -35,3 +35,8 @@ Besides, the parser can handle many types of array columns, you can deserialize 
     @TsvColumnName("失败执行")
     QuestExecParam[] failExec;
     ```
+
+Usage:
+```java
+List<QuestData> questDataList = new TsvParser(bufferedReader).parse(QuestData.class);
+```
